@@ -1,0 +1,24 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+nav {
+  background-color: #f9003d;
+  padding: 2vh;
+  display: flex;
+  justify-content: end;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 8vw;
+  text-transform: uppercase;
+}
