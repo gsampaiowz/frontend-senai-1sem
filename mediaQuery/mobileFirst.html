@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* Mobile First */
-
+      /* BreakPoints - Pontos de alteração do layout */
+      /* Mobile First => 0px até 767px */
       h1 {
         color: red;
       }
 
-      /* Tablets >= 768px */
+      /* Tablets >= 768px até 991px */
       @media screen and (min-width: 768px) {
         h1 {
-            text-align: center;
+          text-align: center;
+          color: blue;
         }
       }
 
-      /* Desktops >= 992px */
-      /* NoteBooks >= 1200px */
+      /* Desktops >= 992px até 1199px */
+      @media screen and (min-width: 992px) {
+        h1 {
+          color: green;
+        }
+      }
+      /* NoteBooks >= 1200px até 1439px */
+      /* Full HD >= 1440px até o infinito */
     </style>
   </head>
   <body>
