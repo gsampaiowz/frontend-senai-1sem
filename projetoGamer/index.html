@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
     <title>Projeto Gamer</title>
   </head>
+  <!-- CORPO DO SITE -->
   <body>
+    <!-- CABEÇALHO -->
     <header>
+      <!-- Parte de cima do CABEÇALHO -->
       <div class="header-top">
         <div class="layoutGrid">
           <div class="contatos">
@@ -27,6 +31,7 @@
               <p>contato@gamer.com.br</p>
             </div>
           </div>
+          <!-- Mídias Sociais -->
           <div class="midiasSociais">
             <a href="">
               <img
@@ -49,10 +54,12 @@
           </div>
         </div>
       </div>
+      <!-- Parte de baixo do CABEÇALHO -->
       <div class="header-bottom">
         <div class="layoutGrid alinhamento-between-center">
-          <!-- Menu -->
+          <!-- MenuMobile -->
           <img
+            onclick="mostrarMenu()"
             src="assets/icons/menuMobile.svg"
             alt="Ícone para abrir o menu"
           />
@@ -63,8 +70,8 @@
             src="assets/images/logotipo-gamer.svg"
             alt="Logotipo escrito 'Gamer'"
           />
-
-          <nav class="menu">
+          <!-- NAVBAR -->
+          <nav class="menu" id="menu">
             <a href="">Ínicio</a>
             <a href="">Jogadores</a>
             <a href="">Equipes</a>
@@ -110,12 +117,14 @@
               </a>
             </div>
           </nav>
-          <div class="menu-usuarios">
+          <!-- Ícones -->
+
+          <div class="menu-usuarios" id="options">
+            <img src="assets/icons/user.svg" alt="Ilustração de usuário" />
             <img
               src="assets/icons/search.svg"
               alt="Ilustração de lupa para acessar pesquisa"
             />
-            <img src="assets/icons/user.svg" alt="Ilustração de usuário" />
             <img
               src="assets/icons/store.svg"
               alt="Ilustração de sacola para acessar loja"
@@ -123,11 +132,13 @@
           </div>
           <!-- Options -->
           <img
+            onclick="mostrarOptions()"
             src="assets/icons/optionsMobile.svg"
             alt="Ícone para abrir opções"
           />
         </div>
       </div>
     </header>
+    <div class="banner"></div>
   </body>
 </html>

@@ -34,11 +34,21 @@ body {
   align-items: center;
 }
 
+.mostrar-menu {
+  left: 0 !important;
+}
+
+.mostrar-options {
+  right: 0 !important;
+}
 /* Mobile First */
 
 /* Header */
 header {
+  position: fixed;
+  width: 100vw;
   height: 60px;
+  z-index: 100;
   background-color: #1b1426;
 }
 
@@ -49,7 +59,8 @@ header .header-top {
 header .header-bottom nav {
   position: fixed;
   top: 60px;
-  left: 0;
+  left: -80vw;
+  z-index: 101;
 
   display: flex;
   flex-direction: column;
@@ -62,6 +73,7 @@ header .header-bottom nav {
   backdrop-filter: blur(45px);
   width: 80vw;
   height: calc(100vh - 60px);
+  transition: left 0.4s;
   /* border: 5px solid blue; */
 }
 
@@ -99,29 +111,40 @@ header .header-bottom .midiasSociais {
   justify-content: center;
 }
 
+header .menu-usuarios img {
+  width: 20px;
+}
+
 header .menu-usuarios {
-  display: none;
+  position: fixed;
+  right: -66px;
+  top: 60px;
+  z-index: 102;
+  transition: 0.4s;
+
+  width: 66px;
+  height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(27, 20, 38, 0.7),
+    rgba(27, 20, 38, 0.4)
+  );
+  backdrop-filter: blur(45px);
+  /* border: 1px solid red; */
 }
 
-/* header .header-top {
-  border-bottom: 0.1px solid #f9aa01;
-  justify-content: space-between;
-  display: flex;
-}
+.banner {
+  background: url("../assets/images/banner.png") no-repeat;
+  background-size: cover;
 
-.contatos {
-  display: flex;
+  position: absolute;
+  top: 60px;
+  height: 100vh;
+  width: 100%;
 }
-
-.telefone {
-  display: flex;
-}
-
-.email {
-  display: flex;
-}
-
-.midiasSociais {
-  display: flex;
-  justify-content: flex-end;
-} */
