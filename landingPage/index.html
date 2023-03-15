@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
   </head>
 
   <body>
     <header>
       <div class="layout-grid header-flex">
-        <nav>
+        <nav id="menuMobile">
           <a href="">inicio</a>
           <a href="">sobre</a>
           <a href="">desafios</a>
@@ -19,6 +20,7 @@
         </nav>
 
         <img
+          onclick="Hamburger()"
           id="menuHamburger"
           src="assets/icons/menu.svg"
           alt="Menu Hamburger"
