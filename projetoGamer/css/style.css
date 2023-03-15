@@ -5,6 +5,21 @@
   src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
 }
 
+@font-face {
+  font-family: Web-Black;
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf");
+}
+
+@font-face {
+  font-family: Web-Bold;
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf");
+}
+
+@font-face {
+  font-family: Quick;
+  src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
 /* Reset CSS */
 
 * {
@@ -21,7 +36,7 @@ body {
 
 /* Classes Genéricas */
 
-.layoutGrid {
+.layout-grid {
   height: 100%;
   width: 90%;
   margin: 0 auto;
@@ -46,6 +61,7 @@ body {
 /* Header */
 header {
   position: fixed;
+  top: 0;
   width: 100vw;
   height: 60px;
   z-index: 100;
@@ -139,12 +155,110 @@ header .menu-usuarios {
   /* border: 1px solid red; */
 }
 
-.banner {
+main {
+  margin-top: 60px;
+}
+
+main .banner {
   background: url("../assets/images/banner.png") no-repeat;
   background-size: cover;
+  background-position: top;
 
-  position: absolute;
-  top: 60px;
-  height: 100vh;
+  height: 606px;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+main .banner-titulo {
+  width: 222px;
+  height: 61px;
+
+  font-family: "Web-Black";
+  font-size: 40px;
+  line-height: 61px;
+
+  color: #ffffff;
+
+  text-shadow: 0px 0px 7px #fd4255;
+}
+
+main .banner a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Web-Bold;
+  color: #1b1426;
+  background-color: #f9aa01;
+  border-radius: 9px;
+  width: 171px;
+  height: 40px;
+}
+
+main .jogos {
+  background-color: #1b1426;
+  height: 590px;
+}
+
+main .jogos .jogos-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main .jogos .jogos-flex .imagem-box {
+  display: flex;
+  align-items: flex-end;
+}
+
+main .jogos .jogos-flex .imagem-box .box-blur {
+  position: absolute;
+  width: 335px;
+  height: 50px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: linear-gradient(
+    91.23deg,
+    rgba(239, 239, 239, 0.6) 0.79%,
+    rgba(239, 239, 239, 0.1) 100%
+  );
+  backdrop-filter: blur(2px);
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.2)
+    )
+    1;
+
+  border-radius: 8px;
+}
+
+main .jogos .jogos-flex .imagem-box .box-blur .box-button {
+  margin-left: 40px;
+  transform: skew(-50deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9aa01;
+  width: 171px;
+  height: 40px;
+}
+
+main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
+  transform: skew(50deg);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Web-Bold;
+  color: #1b1426;
 }
