@@ -241,14 +241,19 @@ main .jogos .jogos-flex .imagem-box .box-blur {
     rgba(239, 239, 239, 0.1) 100%
   );
   backdrop-filter: blur(2px);
-
-  border-radius: 8px; /*1*/
-  border: 1px solid t; /*2*/
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6) 0% rgba(255, 255, 255, 0.2) 100%
-  );
-
   border-radius: 8px;
+}
+
+main .jogos .jogos-flex .imagem-box .box-blur::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(45deg, white, gray);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 main .jogos .jogos-flex .imagem-box .box-blur .box-button {
@@ -377,8 +382,7 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
     background: url("../assets/images/banner-desktop.png") no-repeat;
     background-size: cover;
     background-position: bottom;
-    background-origin: border-box;
-    height: 722px;
+    height: 780px;
   }
 
   main .banner .banner-titulo {
@@ -406,7 +410,11 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
   }
 
   main .jogos .jogos-flex .imagem-box .box-blur {
-    width: 36.6%;
+    width: 556px;
+  }
+
+  main .jogos .jogos-flex .imagem-box .box-blur .box-button {
+    height: 50px;
   }
 
   main .progamer {
