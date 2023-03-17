@@ -56,6 +56,13 @@ body {
 .mostrar-options {
   right: 0 !important;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  nav a:hover {
+    color: #f9aa01;
+  }
+}
+
 /* Mobile First */
 
 /* Header */
@@ -113,6 +120,10 @@ header .header-bottom nav > a {
 
 header .header-bottom nav a:last-of-type {
   border-bottom: none;
+}
+
+header .header-bottom nav a:hover {
+  color: #f9aa01;
 }
 
 header .header-bottom .midias-sociais {
@@ -218,7 +229,7 @@ main .jogos .jogos-flex .imagem-box {
 main .jogos .jogos-flex .imagem-box .box-blur {
   position: absolute;
   width: 90%;
-  height: 8%;
+  height: 11%;
 
   display: flex;
   justify-content: flex-start;
@@ -230,13 +241,12 @@ main .jogos .jogos-flex .imagem-box .box-blur {
     rgba(239, 239, 239, 0.1) 100%
   );
   backdrop-filter: blur(2px);
-  border-style: solid;
-  border-width: 1px;
-  border-image: linear-gradient(
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.2)
-    )
-    1;
+
+  border-radius: 8px; /*1*/
+  border: 1px solid t; /*2*/
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6) 0% rgba(255, 255, 255, 0.2) 100%
+  );
 
   border-radius: 8px;
 }
@@ -286,15 +296,10 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
     width: 100%;
   }
 
-  header .header-top .header-top-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 50px;
-  }
   header .header-top {
     display: block;
+
+    height: 50px;
     border-bottom: 1px solid #f9aa01;
   }
 
@@ -309,7 +314,7 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
   header .header-top .contatos > div {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 
     width: 200px;
     height: 25px;
@@ -318,7 +323,8 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
 
   header .header-top .midias-sociais {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 27px;
 
     width: 120px;
   }
@@ -338,9 +344,12 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
     height: 50px;
     flex-direction: row;
     align-items: center;
-    /* background-color: red; */
     justify-content: space-between;
-    /* padding-bottom: 0; */
+    /* background-color: red; */
+  }
+
+  header .header-bottom nav a:hover {
+    color: #f9aa01;
   }
 
   header .header-bottom nav a {
@@ -349,9 +358,13 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
 
   header .header-bottom .menu-usuarios {
     position: static;
-    width: 140px;
+
+    justify-content: flex-end;
     flex-direction: row;
+    gap: 27px;
+
     height: auto;
+    width: 140px;
     background-color: transparent;
     background-image: none;
   }
@@ -360,15 +373,12 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
     margin-top: 0;
   }
 
-  main .jogos .jogos-flex .imagem-box .box-blur {
-    width: 79%;
-  }
-
   main .banner {
     background: url("../assets/images/banner-desktop.png") no-repeat;
     background-size: cover;
-    background-position: top;
-    height: 780px;
+    background-position: bottom;
+    background-origin: border-box;
+    height: 722px;
   }
 
   main .banner .banner-titulo {
@@ -380,7 +390,66 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
     width: 200px;
   }
 
-  .jogos {
-    display: none;
+  main .jogos {
+    height: 500px;
+  }
+
+  main .jogos .jogos-flex {
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main .jogos .jogos-flex .imagem-box {
+    width: 556px;
+  }
+
+  main .jogos .jogos-flex .imagem-box .box-blur {
+    width: 36.6%;
+  }
+
+  main .progamer {
+    width: 100%;
+    height: 1000px;
+  }
+
+  main .progamer .progamer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  main .progamer .progamer-titulo {
+    width: 100%;
+    background-color: red;
+    border: 3px solid white;
+  }
+
+  main .progamer article {
+    position: relative;
+    width: 585px;
+    height: 700px;
+    background-color: red;
+    border: 3px solid white;
+  }
+
+  main .progamer article .jogos-diferentes,
+  main .progamer article .professores {
+    width: 360px;
+    height: 440px;
+    background-color: purple;
+  }
+
+  main .progamer article .jogos-diferentes {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+  }
+
+  main .progamer article .professores {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
   }
 }
