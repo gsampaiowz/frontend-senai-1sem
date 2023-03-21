@@ -57,15 +57,9 @@ body {
   right: 0 !important;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  nav a:hover {
-    color: #f9aa01;
-  }
-}
+/** Mobile First */
 
-/* Mobile First */
-
-/* Header */
+/*! Header */
 header {
   position: fixed;
   top: 0;
@@ -166,6 +160,8 @@ header .menu-usuarios {
   /* border: 1px solid red; */
 }
 
+/*! Conteúdo */
+
 main {
   margin-top: 60px;
 }
@@ -229,22 +225,32 @@ main .jogos .jogos-flex .imagem-box {
 main .jogos .jogos-flex .imagem-box .box-blur {
   position: absolute;
   width: 90%;
-  height: 11%;
+  height: 50px;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
-  background: linear-gradient(
-    91.23deg,
-    rgba(239, 239, 239, 0.6) 0.79%,
-    rgba(239, 239, 239, 0.1) 100%
-  );
+  border: 2px solid transparent;
+  background: 
+                /* content */ linear-gradient(
+        to right bottom,
+        rgba(239, 239, 239, 0.6) 0%,
+        rgba(239, 239, 239, 0.1) 100%
+      )
+      content-box,
+    /* border */
+      linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      )
+      border-box;
   backdrop-filter: blur(2px);
   border-radius: 8px;
 }
 
-main .jogos .jogos-flex .imagem-box .box-blur::before {
+/* main .jogos .jogos-flex .imagem-box .box-blur::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -254,7 +260,7 @@ main .jogos .jogos-flex .imagem-box .box-blur::before {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-}
+} */
 
 main .jogos .jogos-flex .imagem-box .box-blur .box-button {
   margin-left: 40px;
