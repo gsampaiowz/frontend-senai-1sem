@@ -1,0 +1,58 @@
+/* Imports de fonts */
+
+@font-face {
+    font-family: Inter;
+    src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  }
+  
+  @font-face {
+    font-family: Web-Black;
+    src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: Web-Bold;
+    src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: Quick;
+    src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+  }
+  
+  /* Reset CSS */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: white;
+    background-color: white;
+    font-family: Inter;
+  }
+  
+  /* Classes Genéricas */
+  
+  .layout-grid {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+  }
+  
+  .alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mostrar-menu {
+    left: 0 !important;
+  }
+  
+  .mostrar-options {
+    right: 0 !important;
+  }
