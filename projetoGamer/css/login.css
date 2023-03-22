@@ -57,6 +57,8 @@ body {
   right: 0 !important;
 }
 
+/** Mobile First */
+
 /*! Conteúdo */
 
 main {
@@ -71,10 +73,47 @@ main .banner {
   height: 687px;
   width: 100%;
 
+  align-items: center;
+  padding: 0 0 121px 0;
+}
+
+main .banner .blur-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 26px;
+  padding-top: 78px;
+
+  width: 374px;
+  height: 566px;
+  background: rgba(217, 217, 217, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+main .banner .blur-box .login-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 80px;
+
+  border: 1px solid white;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(27, 20, 38, 0.5),
+    rgba(27, 20, 38, 0.2)
+  );
+  border-radius: 8px;
+
+  width: 335px;
+  height: 462px;
+}
+
+main .banner .blur-box .login-box h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: Web-Black;
+}
+
+main .banner .blur-box .login-box h1 {
 }
