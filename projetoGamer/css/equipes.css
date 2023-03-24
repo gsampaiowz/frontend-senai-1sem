@@ -1,0 +1,226 @@
+/* Imports de fonts */
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face {
+  font-family: Web-Black;
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf");
+}
+
+@font-face {
+  font-family: Web-Bold;
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf");
+}
+
+@font-face {
+  font-family: Quick;
+  src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: white;
+  font-family: Inter;
+}
+
+/* Classes Genéricas */
+
+.layout-grid {
+  max-width: 992px;
+  width: 90%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.alinhamento-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mostrar-menu {
+  left: 0 !important;
+}
+
+.mostrar-options {
+  right: 0 !important;
+}
+
+/** Mobile First */
+
+/*! Conteúdo */
+
+main {
+  margin-top: 60px;
+}
+
+main .banner .layout-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+  background: url("../assets/images/banner-equipes.png") no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  height: 1403px;
+  width: 100%;
+
+  padding: 0 0 121px 0;
+}
+
+main .banner .layout-grid .cadastro-box {
+  margin-top: 78px;
+  width: 335px;
+  height: 492px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  border: 1px solid grey;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(27, 20, 38, 0.5),
+    rgba(27, 20, 38, 0.2)
+  );
+  border-radius: 8px;
+}
+
+main .banner .layout-grid .cadastro-box h1 {
+  position: relative;
+  bottom: 50px;
+
+  border-bottom: 3px solid #f9aa01;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: Web-Black;
+  text-align: center;
+}
+
+main .banner .layout-grid .cadastro-box .input-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 273px;
+  height: 40px;
+
+  border: 0.5px solid grey;
+  background: 
+                /* content */ linear-gradient(
+      to right,
+      rgba(239, 239, 239, 0.6) 0%,
+      rgba(239, 239, 239, 0.1) 100%
+    )
+    content-box;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+}
+
+main .banner .layout-grid .cadastro-box .input-box input {
+  margin-left: 20px;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: Inter;
+}
+
+main .banner .layout-grid .cadastro-box .input-box input::placeholder {
+  color: white;
+}
+
+/* Input File CSS */
+
+.inputfile::-webkit-file-upload-button {
+  /* visibility: hidden etc. wont work */
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+
+
+.inputfile:focus + label {
+  /* keyboard navigation */
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+  pointer-events: none;
+}
+
+main .banner .layout-grid .cadastro-box .image-file{
+  display: flex;
+  justify-content: space-around;
+}
+
+main .banner .layout-grid .cadastro-box .image-file label{
+  font-size: 13px;
+  font-family: Web-Bold;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #D9D9D9;
+}
+
+
+main .banner .layout-grid .cadastro-box .botao-cadastrar {
+  position: relative;
+  top: 30px;
+
+  width: 273px;
+  height: 40px;
+
+  background-color: #f9aa01;
+  font-size: 24px;
+  color: #1b1426;
+  font-family: Web-Bold;
+  border-radius: 8px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table,
+tr,
+th,
+td {
+  border-style: none;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+main .banner .layout-grid table thead {
+  color: #f9aa01;
+  font-size: 20px;
+  font-family: Web-Black;
+  text-shadow: 0 0 3.5px black;
+  text-transform: uppercase;
+  border-bottom: 3px solid #f9aa01;
+}
+
+main .banner .layout-grid table thead
