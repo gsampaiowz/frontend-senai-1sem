@@ -10,6 +10,10 @@ header {
   background-color: #1b1426;
 }
 
+header .layout-grid {
+  height: 100%;
+}
+
 header .header-top {
   display: none;
 }

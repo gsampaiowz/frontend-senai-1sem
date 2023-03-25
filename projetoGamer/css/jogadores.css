@@ -37,8 +37,8 @@ body {
 /* Classes Genéricas */
 
 .layout-grid {
-  height: 100%;
   width: 90%;
+  max-width: 992px;
   margin: 0 auto;
   /* border: 1px solid red; */
 }
@@ -65,7 +65,7 @@ main {
   margin-top: 60px;
 }
 
-main .banner .layout-grid {
+main .banner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +80,7 @@ main .banner .layout-grid {
   padding: 0 0 121px 0;
 }
 
-main .banner .layout-grid .cadastro-box {
+main .banner .cadastro-box {
   margin-top: 78px;
   width: 335px;
   height: 650px;
@@ -101,7 +101,7 @@ main .banner .layout-grid .cadastro-box {
   border-radius: 8px;
 }
 
-main .banner .layout-grid .cadastro-box h1 {
+main .banner .cadastro-box h1 {
   position: relative;
   bottom: 70px;
 
@@ -112,7 +112,7 @@ main .banner .layout-grid .cadastro-box h1 {
   text-align: center;
 }
 
-main .banner .layout-grid .cadastro-box .input-box {
+main .banner .cadastro-box .input-box {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -123,16 +123,15 @@ main .banner .layout-grid .cadastro-box .input-box {
   border: 0.5px solid grey;
   background: 
                 /* content */ linear-gradient(
-      to right,
-      rgba(239, 239, 239, 0.6) 0%,
-      rgba(239, 239, 239, 0.1) 100%
-    )
-    content-box;
+    to right,
+    rgba(239, 239, 239, 0.6) 0%,
+    rgba(239, 239, 239, 0.1) 100%
+  );
   backdrop-filter: blur(2px);
   border-radius: 8px;
 }
 
-main .banner .layout-grid .cadastro-box .input-box input {
+main .banner .cadastro-box .input-box input {
   margin-left: 20px;
   width: 100%;
   height: 30px;
@@ -143,22 +142,25 @@ main .banner .layout-grid .cadastro-box .input-box input {
   font-family: Inter;
 }
 
-main .banner .layout-grid .cadastro-box .input-box input::placeholder {
+main .banner .cadastro-box .input-box input::placeholder {
   color: white;
 }
 
-main .banner .layout-grid .cadastro-box .input-box select {
+main .banner .cadastro-box .input-box select {
   width: 88%;
   height: 30px;
   font-family: Inter;
   background-color: transparent;
-  border: none;
   outline: none;
   color: white;
   margin-left: 20px;
 }
 
-main .banner .layout-grid .cadastro-box .botao-cadastrar {
+main .banner .cadastro-box .input-box select option {
+  color: black;
+}
+
+main .banner .cadastro-box .botao-cadastrar {
   position: relative;
   top: 30px;
 
@@ -177,16 +179,30 @@ main .banner .layout-grid .cadastro-box .botao-cadastrar {
   justify-content: center;
 }
 
-table,
+main .banner table {
+  width: 100%;
+  height: 405px;
+
+  margin-top: 140px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main .banner table,
 tr,
 th,
 td {
   border-style: none;
   border-collapse: collapse;
-  padding: 10px;
 }
 
-main .banner .layout-grid table thead {
+main .banner table thead tr {
+  display: flex;
+  justify-content: space-between;
+  gap: -50px;
+
+  margin-bottom: 25px;
   color: #f9aa01;
   font-size: 20px;
   font-family: Web-Black;
@@ -195,4 +211,61 @@ main .banner .layout-grid table thead {
   border-bottom: 3px solid #f9aa01;
 }
 
-main .banner .layout-grid table thead
+main .banner table thead th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+main .banner table tr {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+main .banner table tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main .banner table tbody tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(27, 20, 38, 0.5),
+    rgba(27, 20, 38, 0.2)
+  );
+
+  backdrop-filter: blur(2px);
+  height: 70px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+main .banner table tbody tr td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+
+  width: 100%;
+  height: 38px;
+  border-right: 3px solid #f9aa01;
+}
+
+main .banner table td:last-of-type {
+  border: none;
+}
+
+main .banner table tbody tr .mail {
+  font-size: 10px;
+  padding-right: 10px;
+  padding-left: 5px;
+}
