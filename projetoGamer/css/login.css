@@ -1,4 +1,4 @@
-/* Imports de fonts */
+/*! Imports de fonts */
 
 @font-face {
   font-family: Inter;
@@ -20,7 +20,7 @@
   src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
 
-/* Reset CSS */
+/*! Reset CSS */
 
 * {
   margin: 0;
@@ -34,7 +34,7 @@ body {
   font-family: Inter;
 }
 
-/* Classes Genéricas */
+/*! Classes Genéricas */
 
 .layout-grid {
   width: 90%;
@@ -57,7 +57,7 @@ body {
   right: 0 !important;
 }
 
-/** Mobile First */
+/*! Mobile First */
 
 /*! Conteúdo */
 
@@ -80,6 +80,8 @@ main .banner {
   padding: 0 0 121px 0;
 }
 
+/* ! FUNDO COM BLUR */
+
 main .banner .blur-box {
   display: flex;
   justify-content: center;
@@ -90,9 +92,10 @@ main .banner .blur-box {
 
   width: 100%;
   height: 566px;
-  background: rgba(217, 217, 217, 0.1);
   backdrop-filter: blur(2px);
 }
+
+/*! FORMS COM BLUR */
 
 main .banner .blur-box .login-box {
   display: flex;
@@ -123,6 +126,8 @@ main .banner .blur-box .login-box h1 {
   text-transform: uppercase;
   font-family: Web-Black;
 }
+
+/* ! INPUT COM FUNDO GRADIENTE */
 
 main .banner .blur-box .login-box .input-box {
   display: flex;

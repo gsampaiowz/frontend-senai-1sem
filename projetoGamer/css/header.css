@@ -1,6 +1,6 @@
-/* Mobile First */
+/*! Mobile First */
 
-/* Header */
+/*! Header */
 header {
   position: fixed;
   top: 0;
@@ -105,14 +105,14 @@ header .menu-usuarios {
   /* border: 1px solid red; */
 }
 
-/* Desktop >= 1200px*/
+/*! Desktop >= 1200px*/
 @media screen and (min-width: 1200px) {
   .layout-grid {
     width: 100%;
     max-width: 1200px;
   }
 
-  /* esconde os elementos desnecessários */
+  /*! esconde os elementos desnecessários */
   header .header-bottom .hamburger,
   header .header-bottom .options,
   header .header-bottom nav .telefone,
