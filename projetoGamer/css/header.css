@@ -27,6 +27,7 @@ header .header-bottom nav {
   display: flex;
   flex-direction: column;
 
+  border-radius: 0 8px 8px 0;
   background-image: linear-gradient(
     to right bottom,
     rgba(27, 20, 38, 0.7),
@@ -96,6 +97,7 @@ header .menu-usuarios {
   justify-content: space-around;
   align-items: center;
 
+  border-radius: 8px 0 0 8px;
   background-image: linear-gradient(
     to right bottom,
     rgba(27, 20, 38, 0.7),

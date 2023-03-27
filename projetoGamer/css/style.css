@@ -65,6 +65,8 @@ main {
   margin-top: 60px;
 }
 
+/* ! SESSAO INICIO */
+
 main .banner {
   background: url("../assets/images/banner.png") no-repeat;
   background-size: cover;
@@ -104,16 +106,20 @@ main .banner a {
   height: 40px;
 }
 
+/* ! SESSAO JOGOS */
+
 main .jogos {
   background-color: #1b1426;
   height: 590px;
 }
 
 main .jogos .jogos-flex {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+
+  height: 100%;
 }
 
 main .jogos .jogos-flex .imagem-box {
@@ -121,9 +127,13 @@ main .jogos .jogos-flex .imagem-box {
   align-items: flex-end;
 }
 
+main .jogos .jogos-flex .imagem-box img {
+  width: 335px;
+}
+
 main .jogos .jogos-flex .imagem-box .box-blur {
   position: absolute;
-  width: 90%;
+  width: 335px;
   height: 50px;
 
   display: flex;
@@ -168,6 +178,8 @@ main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
   color: #1b1426;
 }
 
+/* ! SESSAO PROGAMER */
+
 main .progamer {
   height: 1535px;
   background-color: #f9aa01;
@@ -177,6 +189,7 @@ main .progamer .progamer-flex {
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 
 main .progamer .progamer-flex .progamer-titulo {
@@ -196,7 +209,7 @@ main .progamer .progamer-flex .progamer-titulo h2 {
 
 main .progamer .progamer-flex .progamer-titulo hr {
   margin-top: 25px;
-  width: 200px;
+  width: 90%;
   border: 1px solid #1b1426;
 }
 
@@ -208,21 +221,31 @@ main .progamer .progamer-flex .articles {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 main .progamer .progamer-flex .articles .jogos-diferentes {
   background: url(../assets/images/kiljoy.png) no-repeat;
   height: 511px;
+  width: 322px;
+  position: relative;
 }
 
 main .progamer .progamer-flex .articles .professores {
   background: url(../assets/images/jinx.png) no-repeat;
   height: 428px;
+  width: 322px;
+  position: relative;
 }
 
 main .progamer .progamer-flex .articles .box-blur {
   height: 300px;
   width: 231px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
   background: linear-gradient(
     to right bottom,
@@ -231,9 +254,117 @@ main .progamer .progamer-flex .articles .box-blur {
   );
   border: 1px solid grey;
   border-radius: 8px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
-main .progamer .progamer-flex .articles .box-blur {
+
+main .progamer .progamer-flex .articles .box-blur h3 {
+  font-family: Web-Black;
+  font-size: 18px;
+  text-shadow: 0 0 6px #c6a5e5;
+  text-transform: uppercase;
+}
+
+main .progamer .progamer-flex .articles .box-blur p {
+  text-align: justify;
+  width: 176px;
+  font-family: Quick;
+  font-size: 13px;
+}
+
+main .progamer .progamer-flex .articles .jogos-box {
+  position: absolute;
+  bottom: 79px;
+  right: 0px;
+}
+
+main .progamer .progamer-flex .articles .profs-box {
+  position: absolute;
+  bottom: 17px;
+  left: 0px;
+}
+
+/* ! SESSAO NOTICIAS */
+
+main .noticias {
+  height: 3675px;
+  width: 100%;
+  background: url(../assets/images/backgrund_notícias.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+main .noticias .blur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 1225px;
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 24, 77, 1),
+    rgba(27, 20, 38, 0)
+  );
+  backdrop-filter: blur(4px);
+}
+
+main .noticias .blur .noticia-titulo {
+  margin-top: 46px;
+  margin-bottom: 118px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .noticias .blur .noticia-titulo h2 {
+  text-transform: uppercase;
+  font-family: Web-Black;
+  font-size: 22px;
+  height: 62px;
+}
+
+main .noticias .blur .noticia-titulo hr {
+  width: 90%;
+  border-color: #f9aa01;
+}
+
+main .noticias .blur .container-noticias {
+  height: 3418px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  align-items: center;
+}
+
+main .noticias .blur .container-noticias .noticia-box {
+  height: 386px;
+  max-width: 380px;
+
+  background: linear-gradient(
+    to right bottom,
+    rgba(37, 26, 52, 0.34),
+    rgba(5, 1, 12, 0.79)
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+
+main .noticias .blur .container-noticias .noticia-box img {
+  width: 100%;
+}
+
+main .noticias .blur .container-noticias .noticia-box h3 {
+  font-family: Web-Bold;
+  font-size: 24px;
+  margin: 16px 25px 0 25px;
+}
+
+main .noticias .blur .container-noticias .noticia-box p {
+  font-family: Quick;
+  font-size: 16px;
+  margin: 16px 25px 0 25px;
 }
 
 /*! Tablets >= 768px */
@@ -385,7 +516,6 @@ main .progamer .progamer-flex .articles .box-blur {
 
   main .progamer .progamer-flex {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -393,6 +523,11 @@ main .progamer .progamer-flex .articles .box-blur {
     width: 100%;
     background-color: red;
     border: 3px solid white;
+  }
+
+  main .progamer .progamer-flex .articles {
+    display: flex;
+    flex-direction: row;
   }
 
   main .progamer article {

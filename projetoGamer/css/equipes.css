@@ -156,17 +156,30 @@ main .banner .cadastro-box .input-box input::placeholder {
   color: white;
 }
 
-main .banner .cadastro-box .input-box select {
-  width: 88%;
-  height: 30px;
-  font-family: Inter;
-  background-color: transparent;
-  outline: none;
-  color: white;
-  margin-left: 20px;
+input::-webkit-file-upload-button {
+  display: none;
 }
 
-main .banner .cadastro-box .input-box select option {
+main .banner .cadastro-box .flex-file {
+  width: 273px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .banner .cadastro-box .flex-file input {
+  width: 141px;
+  font-size: 10px;
+  font-family: Inter;
+}
+
+main .banner .cadastro-box .flex-file label {
+  font-size: 13px;
+  font-family: Web-Bold;
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  padding: 10px;
   color: black;
 }
 
