@@ -520,10 +520,8 @@ main .noticias .blur .container-noticias .noticia-box p {
   }
 
   main .progamer .progamer-flex .articles {
-    display: flex;
     flex-direction: row;
-    height: 692px;
-    margin-top: 200px;
+    margin-top: 0;
   }
 
   main .progamer .progamer-flex .articles .box-blur {
@@ -542,8 +540,8 @@ main .noticias .blur .container-noticias .noticia-box p {
 
   main .progamer .progamer-flex .articles .jogos-diferentes {
     bottom: 100px;
-    right: 0;
     width: 425px;
+    height: 692px;
     background-size: cover;
   }
 
@@ -554,8 +552,8 @@ main .noticias .blur .container-noticias .noticia-box p {
 
   main .progamer .progamer-flex .articles .professores {
     bottom: 100px;
-    left: 0;
     width: 521px;
+    height: 692px;
     background-size: cover;
   }
 

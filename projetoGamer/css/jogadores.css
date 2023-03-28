@@ -162,12 +162,14 @@ main .banner .cadastro-box .input-box select {
   font-family: Inter;
   background-color: transparent;
   outline: none;
+  border: none;
   color: white;
   margin-left: 20px;
 }
 
 main .banner .cadastro-box .input-box select option {
   color: black;
+  background-color: grey;
 }
 
 main .banner .cadastro-box .botao-cadastrar {

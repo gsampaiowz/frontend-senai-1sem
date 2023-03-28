@@ -1,150 +1,150 @@
 /* ! RODAPÉ */
 
 footer {
-    height: 1531px;
-  
-    position: relative;
-  
-    background: url(../assets/images/backgroung_footer.png) no-repeat;
-    background-size: cover;
-    background-position: top;
-  }
-  
-  footer .gradient {
-    width: 100%;
-    height: 212px;
-  
-    background: linear-gradient(to bottom, black, rgba(67, 3, 99, 0.03));
-  }
-  
-  footer .layout-grid {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer .gradient .logo {
-    align-self: center;
-    width: 110px;
-    margin-top: 91px;
-  }
-  
-  footer .gradient .desc {
-    align-self: center;
-    font-family: Quick;
-    font-size: 14px;
-    margin-top: 41px;
-  }
-  
-  footer .gradient .redes {
-    display: flex;
-    justify-content: space-between;
-  
-    margin-top: 50px;
-  }
-  
-  footer .gradient .title {
-    margin-top: 50px;
-    font-family: Web-Black;
-    font-size: 30px;
-  }
-  
-  footer .gradient .title hr {
-    width: 40vw;
-    border: 2px solid #f9aa01;
-    margin-bottom: 50px;
-  }
-  
-  footer .gradient .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8vw;
-  }
-  
-  footer .gradient .links span {
-    display: flex;
-    align-items: center;
-    gap: 3vw;
-  
-    font-family: Web-Bold;
-    font-size: 16px;
-  }
-  
-  footer .gradient .links span a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  footer .gradient .links span hr {
-    height: 1px;
-    width: 4vw;
-  
-    border-color: #f9aa01;
-  }
-  
-  footer .gradient h3 {
-    margin-bottom: 10px;
-    font-family: Web-Bold;
-    font-size: 16px;
-  }
-  
-  footer .gradient .inputs {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer .gradient .inputs input {
-    height: 40px;
-    border-radius: 8px;
-  }
-  
-  footer .gradient .inputs input[type="email"] {
-    margin-bottom: 20px;
-  
-    color: white;
-    outline: none;
-    border: 0.5px solid grey;
-    background: 
+  height: 1531px;
+
+  position: relative;
+
+  background: url(../assets/images/backgroung_footer.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+footer .gradient {
+  height: 212px;
+  background: linear-gradient(to bottom, black, rgba(67, 3, 99, 0.03));
+}
+
+footer .layout-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .gradient .logo {
+  align-self: center;
+  width: 110px;
+  margin-top: 91px;
+}
+
+footer .gradient .desc {
+  align-self: center;
+  font-family: Quick;
+  font-size: 14px;
+  margin-top: 41px;
+}
+
+footer .gradient .redes {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 50px;
+}
+
+footer .gradient .title {
+  margin-top: 50px;
+  font-family: Web-Black;
+  font-size: 30px;
+}
+
+footer .gradient .title hr {
+  width: 150px;
+  border: 2px solid #f9aa01;
+  margin-bottom: 50px;
+}
+
+footer .gradient .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+footer .gradient .links span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-family: Web-Bold;
+  font-size: 16px;
+}
+
+footer .gradient .links span a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* footer .gradient .links span a::before {
+  content: "-";
+  color: #f9aa01;
+} */
+
+footer .gradient .links span hr {
+  height: 1px;
+  width: 16px;
+  border-color: #f9aa01;
+}
+
+footer .gradient h3 {
+  margin-bottom: 10px;
+  font-family: Web-Bold;
+  font-size: 16px;
+}
+
+footer .gradient .inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .gradient .inputs input {
+  height: 40px;
+  border-radius: 8px;
+}
+
+footer .gradient .inputs input[type="email"] {
+  margin-bottom: 20px;
+
+  color: white;
+  outline: none;
+  border: 0.5px solid grey;
+  background: 
                   /* content */ linear-gradient(
-        to right,
-        rgba(239, 239, 239, 0.6) 0%,
-        rgba(239, 239, 239, 0.1) 100%
-      )
-      content-box;
-    backdrop-filter: blur(2px);
-  }
-  
-  footer .gradient .inputs input[type="email"]::placeholder {
-    color: white;
-    font-family: Quick;
-  
-    position: relative;
-    left: 15px;
-  }
-  
-  footer .gradient .inputs input[type="submit"] {
-    background-color: #f9aa01;
-    color: #1b1426;
-    font-family: Web-Bold;
-    font-size: 24px;
-    border: none;
-  }
-  
-  footer .gradient a {
-  }
-  
-  footer .gradient a .return {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-  }
-  
-  footer .gradient small {
-    width: 90%;
-    text-align: center;
-    font-family: Inter;
-    font-size: 16px;
-    position: absolute;
-    bottom: 40px;
-  }
+      to right,
+      rgba(239, 239, 239, 0.6) 0%,
+      rgba(239, 239, 239, 0.1) 100%
+    )
+    content-box;
+  backdrop-filter: blur(2px);
+}
+
+footer .gradient .inputs input[type="email"]::placeholder {
+  color: white;
+  font-family: Quick;
+
+  position: relative;
+  left: 15px;
+}
+
+footer .gradient .inputs input[type="submit"] {
+  background-color: #f9aa01;
+  color: #1b1426;
+  font-family: Web-Bold;
+  font-size: 24px;
+  border: none;
+}
+
+footer .gradient a .return {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+}
+
+footer .gradient .copy small {
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
