@@ -473,7 +473,7 @@ main .noticias .blur .container-noticias .noticia-box p {
   main .banner {
     background: url("../assets/images/banner-desktop.png") no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     height: 780px;
   }
 
@@ -492,68 +492,75 @@ main .noticias .blur .container-noticias .noticia-box p {
 
   main .jogos .jogos-flex {
     flex-direction: row;
-    height: 500px;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
   }
 
-  main .jogos .jogos-flex .imagem-box {
+  main .jogos .jogos-flex .imagem-box img {
     width: 556px;
   }
 
   main .jogos .jogos-flex .imagem-box .box-blur {
     width: 556px;
+    height: 80px;
   }
 
   main .jogos .jogos-flex .imagem-box .box-blur .box-button {
-    height: 50px;
+    height: 57px;
   }
 
   main .progamer {
-    width: 100%;
     height: 1000px;
   }
 
-  main .progamer .progamer-flex {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  main .progamer .progamer-titulo {
-    width: 100%;
-    background-color: red;
-    border: 3px solid white;
+  main .progamer .progamer-flex .progamer-titulo h2 {
+    font-size: 40px;
+    letter-spacing: 6px;
   }
 
   main .progamer .progamer-flex .articles {
     display: flex;
     flex-direction: row;
+    height: 692px;
+    margin-top: 200px;
   }
 
-  main .progamer article {
-    position: relative;
-    width: 585px;
-    height: 700px;
-    background-color: red;
-    border: 3px solid white;
-  }
-
-  main .progamer article .jogos-diferentes,
-  main .progamer article .professores {
+  main .progamer .progamer-flex .articles .box-blur {
     width: 360px;
     height: 440px;
-    background-color: purple;
   }
 
-  main .progamer article .jogos-diferentes {
-    position: absolute;
-    bottom: 40px;
+  main .progamer .progamer-flex .articles .box-blur h3 {
+    font-size: 25px;
+  }
+
+  main .progamer .progamer-flex .articles .box-blur p {
+    font-size: 16px;
+    width: 75%;
+  }
+
+  main .progamer .progamer-flex .articles .jogos-diferentes {
+    bottom: 100px;
     right: 0;
+    width: 425px;
+    background-size: cover;
   }
 
-  main .progamer article .professores {
-    position: absolute;
-    bottom: 40px;
+  main .progamer .progamer-flex .articles .jogos-diferentes .jogos-box {
+    bottom: 65px;
+    right: -170px;
+  }
+
+  main .progamer .progamer-flex .articles .professores {
+    bottom: 100px;
     left: 0;
+    width: 521px;
+    background-size: cover;
+  }
+
+  main .progamer .progamer-flex .articles .professores .profs-box {
+    bottom: 65px;
+    left: -60px;
   }
 }
