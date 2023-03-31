@@ -19,5 +19,4 @@ int anoAtual = DateTime.Now.Year;
 int anos = anoAtual - nasc;
 double semanas = anos * 12 * 4.34;
 
-Console.WriteLine(@$"A sua idade em anos é {anos}, já em semanas é aproximadamente {Math.Round(semanas, 0)}.
-                                                                                                          ");
+Console.WriteLine(@$"A sua idade em anos é {anos}, já em semanas é aproximadamente {Math.Round(semanas, 0)}.");

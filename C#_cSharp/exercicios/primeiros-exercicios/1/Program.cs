@@ -7,7 +7,7 @@ Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(
     @$"
 ---------------------------------------------------------------------------------------------------------------
-                            PROGRAMA PARA CALCULAR IDADE EM MESES, DIAS, HORAS E MINUTOS
+                    PROGRAMA PARA CALCULAR IDADE EM MESES, DIAS, HORAS E MINUTOS
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Quantos anos você têm?");

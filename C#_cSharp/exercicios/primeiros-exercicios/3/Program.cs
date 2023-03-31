@@ -10,11 +10,22 @@ Console.WriteLine(@$"
                                                                                                              ");
 
 Console.WriteLine($"Digite o valor da primeira nota: ");
-int nasc = int.Parse(Console.ReadLine());
+float nota1 = float.Parse(Console.ReadLine()!);
 
-int anos = 2023 - nasc;
-double semanas = anos * 12 * 4.34;
+Console.WriteLine($"Digite o valor da segunda nota: ");
+float nota2 = float.Parse(Console.ReadLine()!);
 
-Console.WriteLine(@$"A sua idade em anos é {anos}, já em semanas é aproximadamente {Math.Round(semanas, 0)}.
-                                                                                                          ");
-                                                                                                    
+Console.WriteLine($"Digite o valor da terceira nota: ");
+float nota3 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"Digite o valor da quarta nota: ");
+float nota4 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"Digite o valor da quinta nota: ");
+float nota5 = float.Parse(Console.ReadLine()!);
+
+float media = (nota1 + nota2 + nota3 + nota4 + nota5) / 5;
+
+Console.WriteLine($"A média das notas é: {media}");
+
+Console.ResetColor();
