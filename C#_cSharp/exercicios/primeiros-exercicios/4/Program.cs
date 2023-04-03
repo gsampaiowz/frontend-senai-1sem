@@ -1,20 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+//* faça um programa para uma quitanda que receba o peso em kg de um alimento e calcule o valor da compra
+//* pré-definir o valor do kg do produto
+
 Console.ForegroundColor = ConsoleColor.Green;
 
 Console.WriteLine(@$"
 ---------------------------------------------------------------------------------------------------------------
-          PROGRAMA PARA CALCULAR A IDADE EM ANOS E EM SEMANAS, DE ACORDO COM O ANO DE NASCIMENTO
+          PROGRAMA PARA CALCULAR PESO EM KG DO ALIMENTO E VALOR DA COMPRA
 ---------------------------------------------------------------------------------------------------------------
                                                                                                              ");
 
-Console.WriteLine($"Digite o ano que você nasceu: ");
-int nasc = int.Parse(Console.ReadLine());
+Console.WriteLine($"Quanto custa, em reais, o kg do alimento desejado?");
+float kg = float.Parse(Console.ReadLine()!);
 
-//Módulo para receber a data atual
-int anoAtual = DateTime.Now.Year;
+Console.WriteLine($"Qual o peso, em kg, da sua compra?");
+float peso = float.Parse(Console.ReadLine()!);
 
-int anos = anoAtual - nasc;
-double semanas = anos * 12 * 4.34;
+float valorCompra = kg * peso;
 
-Console.WriteLine(@$"A sua idade em anos é {anos}, já em semanas é aproximadamente {Math.Round(semanas, 0)}.");
+Console.WriteLine($"O valor da sua compra é: R${valorCompra}");
+
+Console.ResetColor();
