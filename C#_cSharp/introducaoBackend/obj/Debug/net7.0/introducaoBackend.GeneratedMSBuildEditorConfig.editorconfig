@@ -5,11 +5,6 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = introducaoBackend
-<<<<<<< HEAD:C#_cSharp/introducaoBackend/obj/Debug/net7.0/introducaoBackend.GeneratedMSBuildEditorConfig.editorconfig
-build_property.ProjectDir = C:\Users\42591939888\Desktop\Senai\C#_cSharp\introducaobackend\
-=======
-build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai-1\introducoes\introducaoBackend\
->>>>>>> 0fcec93715702bb4c4deb2cf7660bdbd692ea347:introducoes/introducaoBackend/obj/Debug/net7.0/introducaoBackend.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = c:\Users\Sampaio\Desktop\Senai\C#_cSharp\introducaoBackend\
