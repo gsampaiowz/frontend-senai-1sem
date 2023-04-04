@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\exemplo\\exemplo.csproj": {}
+    "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\calculator\\calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\exemplo\\exemplo.csproj": {
+    "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\calculator\\calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\exemplo\\exemplo.csproj",
-        "projectName": "exemplo",
-        "projectPath": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\exemplo\\exemplo.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\calculator\\calculator.csproj",
+        "projectName": "calculator",
+        "projectPath": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\calculator\\calculator.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\exemplo\\obj\\",
+        "outputPath": "C:\\Users\\Aluno\\Desktop\\Senai\\C#_cSharp\\switch-case\\calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

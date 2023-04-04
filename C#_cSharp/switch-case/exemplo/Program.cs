@@ -4,7 +4,7 @@ Console.ForegroundColor = ConsoleColor.Blue;
 
 Console.WriteLine($"Informe o número correspondente ao dia da semana - exemplo 2 p");
 
-int diaSemana = int.Parse(Console.ReadLine());
+int diaSemana = int.Parse(Console.ReadLine()!);
 
 switch (diaSemana)
 {
