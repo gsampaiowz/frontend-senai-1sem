@@ -13,10 +13,10 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Quantos gols o Corinthians fez?");
-int timao = int.Parse(Console.ReadLine());
+int timao = int.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"Quantos gols o Palmeiras fez?");
-int verdao = int.Parse(Console.ReadLine());
+int verdao = int.Parse(Console.ReadLine()!);
 
 if (timao > verdao)
 {

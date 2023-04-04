@@ -11,7 +11,7 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Quantas maçãs você vai comprar? ");
-int macas = int.Parse(Console.ReadLine());
+int macas = int.Parse(Console.ReadLine()!);
 
 float precoMacas = 0.30F;
 

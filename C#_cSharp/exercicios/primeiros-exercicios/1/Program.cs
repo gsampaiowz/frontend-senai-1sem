@@ -11,7 +11,7 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Quantos anos você têm?");
-int anos = int.Parse(Console.ReadLine());
+int anos = int.Parse(Console.ReadLine()!);
 
 float meses = anos * 12;
 float dias = anos * 365;

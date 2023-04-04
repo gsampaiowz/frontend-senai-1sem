@@ -15,7 +15,7 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Digite a senha: ");
-int senha = int.Parse(Console.ReadLine());
+int senha = int.Parse(Console.ReadLine()!);
 
 
 if (senha == 1234)

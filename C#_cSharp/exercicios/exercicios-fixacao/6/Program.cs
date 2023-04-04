@@ -11,10 +11,10 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Digite a média final do aluno: ");
-float media = float.Parse(Console.ReadLine());
+float media = float.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"Digite a frequência final do aluno, em porcentagem: ");
-float frequencia = float.Parse(Console.ReadLine());
+float frequencia = float.Parse(Console.ReadLine()!);
 
 frequencia = frequencia / 100;
 

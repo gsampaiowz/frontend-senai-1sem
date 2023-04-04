@@ -3,7 +3,7 @@
 //? A depender da opção, exiba uma mensagem se gostaria de acrescentar gelo.
 //? Se sim, exiba uma mensagem que a bebida em questão será com adicional de gelo, caso contrário, a bebida é sem gelo adicional.
 
-Console.ForegroundColor = ConsoleColor.DarkRed;
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 
 Console.WriteLine(@$"
 ---------------------------

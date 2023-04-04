@@ -49,7 +49,7 @@
 //Condicional Encadeada
 
 Console.WriteLine($"Qual a sua idade?");
-int idade = int.Parse(Console.ReadLine());
+int idade = int.Parse(Console.ReadLine()!);
 
 if (idade >= 18)
 {

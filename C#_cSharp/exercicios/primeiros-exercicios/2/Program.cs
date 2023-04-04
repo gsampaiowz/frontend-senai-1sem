@@ -11,7 +11,7 @@ Console.WriteLine(@$"
                                                                                                              ");
 
 Console.WriteLine($"Digite o ano que você nasceu: ");
-int nasc = int.Parse(Console.ReadLine());
+int nasc = int.Parse(Console.ReadLine()!);
 
 //Módulo para receber a data atual
 int anoAtual = DateTime.Now.Year;

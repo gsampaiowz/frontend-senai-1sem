@@ -11,13 +11,13 @@ Console.WriteLine(
 ---------------------------------------------------------------------------------------------------------------");
 
 Console.WriteLine($"Digite o tamando do lado 1, em centímentros: ");
-float lado1 = float.Parse(Console.ReadLine());
+float lado1 = float.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"Digite o tamando do lado 2, em centímentros: ");
-float lado2 = float.Parse(Console.ReadLine());
+float lado2 = float.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"Digite o tamando do lado 3, em centímentros: ");
-float lado3 = float.Parse(Console.ReadLine());
+float lado3 = float.Parse(Console.ReadLine()!);
 
 if (lado1 == lado2 && lado2 == lado3)
 {

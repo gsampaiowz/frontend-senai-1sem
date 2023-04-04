@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-condicionais\\estruturas-condicionais.csproj",
-      "projectName": "estruturas-condicionais",
-      "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-condicionais\\estruturas-condicionais.csproj",
+      "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-repeticao\\estruturas-repeticao.csproj",
+      "projectName": "estruturas-repeticao",
+      "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-repeticao\\estruturas-repeticao.csproj",
       "packagesPath": "C:\\Users\\42591939888\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-condicionais\\obj\\",
+      "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\estruturas-repeticao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\42591939888\\AppData\\Roaming\\NuGet\\NuGet.Config",
