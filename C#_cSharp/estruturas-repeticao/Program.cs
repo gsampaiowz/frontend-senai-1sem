@@ -8,30 +8,30 @@
 // while (i <= 10)
 // {
 //     Console.WriteLine(i);
-//     i = i + 2; //! INCREMENTO COMPOSTO
-//     i++; //! INCREMENTO SIMPLES
+//     i += 1; //* INCREMENTO COMPOSTO : i = i + num
+//     i++; //* INCREMENTO SIMPLES : i = i + 1
 
 // }
 
 //! EXEMPLO WHILE
 
-Console.ForegroundColor = ConsoleColor.Green;
+// Console.ForegroundColor = ConsoleColor.Green;
 
-bool idadeCerta = false;
+// bool idadeCerta = false;
 
-while (idadeCerta == false) //* (!(idadeCerta == true))
-{
-    Console.WriteLine($"Qual a idade do CR7?");
-    int idade = int.Parse(Console.ReadLine()!);
+// while (idadeCerta == false) //* (!(idadeCerta == true))
+// {
+//     Console.WriteLine($"Qual a idade do CR7?");
+//     int idade = int.Parse(Console.ReadLine()!);
 
-    if (idade == 38)
-    {
-        idadeCerta = true;
-    }
+//     if (idade == 38)
+//     {
+//         idadeCerta = true;
+//     }
 
-}
+// }
 
-Console.ResetColor();
+// Console.ResetColor();
 
 //! EXEMPLO LOGIN
 
@@ -52,27 +52,46 @@ Console.ResetColor();
 
 //! EXEMPLO DO-WHILE
 
-Console.ForegroundColor = ConsoleColor.Red;
+// Console.ForegroundColor = ConsoleColor.Red;
 
-idadeCerta = false;
+// idadeCerta = false;
 
-do
+// do
+// {
+//     Console.WriteLine($"Qual a idade do CR7?");
+//     int idade = int.Parse(Console.ReadLine()!);
+
+//     if (idade == 38)
+//     {
+//         Console.WriteLine($"ACERTOU!");
+
+//         idadeCerta = true;
+//     }
+//     else
+//     {
+//         Console.WriteLine($"ERROU PARCEIRO");
+
+//     }
+
+// } while (idadeCerta == true);
+
+// Console.ResetColor();
+
+//! EXEMPLO FOR 
+
+// for (inicializador; condição; iterador)
+// {
+//     bloco de código
+// }
+
+// for (int x = 0; x <= 100; x += 3)
+// {
+//     Console.WriteLine(x);
+
+// }
+
+for (int x = 500; x >= 0; x -= 5)
 {
-    Console.WriteLine($"Qual a idade do CR7?");
-    int idade = int.Parse(Console.ReadLine()!);
+    Console.WriteLine(x);
 
-    if (idade == 38)
-    {
-        Console.WriteLine($"ACERTOU!");
-
-        idadeCerta = true;
-    }
-    else
-    {
-        Console.WriteLine($"ERROU PARCEIRO");
-
-    }
-
-} while (idadeCerta == true);
-
-Console.ResetColor();
+}
