@@ -25,6 +25,7 @@
 
 .mostrarMenu {
   left: 0 !important;
+  border-radius: 0 8px 8px 0;
 }
 
 /*! Desktop First */
@@ -49,9 +50,13 @@ body {
   /* border: 3px solid green; */
 }
 
+/* ! CABEÇALHO */
+
 header {
   background-color: #f9003d;
   height: 60px;
+  position: fixed;
+  width: 100%;
 }
 
 /*! FlexBox no Cabeçalho */
@@ -64,6 +69,7 @@ header .header-flex {
 }
 
 header .logo {
+  z-index: 100;
   width: 220px;
   height: 80px;
   position: absolute;
@@ -282,7 +288,6 @@ main .endereco .endereco-flex .map-box img {
 }
 
 footer {
-  position: relative;
   bottom: 0;
 
   display: flex;
@@ -420,7 +425,7 @@ footer {
 
   main .endereco .endereco-flex .map-box img {
     position: static;
-    width: 100%;
+    width: 300px;
     border-radius: 8px;
   }
 
