@@ -14,7 +14,7 @@ string sobrenome = Console.ReadLine()!.ToUpper();
 Console.WriteLine($"Digite sua senha: ");
 string senha = Console.ReadLine()!.ToUpper();
 
-while (senha.Contains(nome))
+while (senha.Contains(nome)) //! função Contains para verificar se contem algo específico em uma variável
 {
     Console.WriteLine($"Sua senha não pode conter o seu nome de usuário! Por favor digite novamente: ");
     senha = Console.ReadLine()!.ToUpper();

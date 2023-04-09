@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj": {}
+    "C:\\Users\\jacky\\OneDrive\\Área de Trabalho\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj": {
+    "C:\\Users\\jacky\\OneDrive\\Área de Trabalho\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj",
+        "projectUniqueName": "C:\\Users\\jacky\\OneDrive\\Área de Trabalho\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj",
         "projectName": "4",
-        "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj",
-        "packagesPath": "C:\\Users\\42591939888\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\obj\\",
+        "projectPath": "C:\\Users\\jacky\\OneDrive\\Área de Trabalho\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\4.csproj",
+        "packagesPath": "C:\\Users\\jacky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacky\\OneDrive\\Área de Trabalho\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\42591939888\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\jacky\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
