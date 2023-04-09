@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = extra
-build_property.ProjectDir = c:\Users\jacky\OneDrive\Área de Trabalho\Senai\C#_cSharp\exercicios\exercicios-repeticao\extra\
+build_property.RootNamespace = for
+build_property.ProjectDir = C:\Users\jacky\OneDrive\Área de Trabalho\Senai\C#_cSharp\exercicios\exercicios-estudos\for\
