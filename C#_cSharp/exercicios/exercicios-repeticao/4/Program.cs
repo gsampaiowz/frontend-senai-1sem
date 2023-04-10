@@ -31,27 +31,17 @@ int homensNAO = 0;
 
 Console.WriteLine($"\nPesquisa de Mercado:");
 
-for (int i = 1; i <= 10; i++)
+for (int i = 1; i <= 4; i++)
 {
-    Console.WriteLine($"\nEntrevistando pessoa {i}. Você gostou do produto? Digite S para SIM ou N para NÃO: ");
-    char produto = char.Parse(Console.ReadLine()!.ToUpper());
 
-    if (produto == 'S')
-    {
-        respostaSIM++;
-    }
-    else if (produto == 'N')
-    {
-        respostaNAO++;
-    }
-    else
-    {
-        Console.WriteLine($"\nResposta inválida, por favor digite S ou N!");
-        produto = char.Parse(Console.ReadLine()!.ToUpper());
-    }
-
-    Console.WriteLine($"\nAgora, para obtenção de dados estatísticos, qual seu sexo? Digite F para FEMININO ou M para MASCULINO: ");
+    Console.WriteLine($"\n Entrevistando pessoa {i}. Para obtenção de dados estatísticos, qual seu sexo? Digite F para FEMININO ou M para MASCULINO: ");
     char sexo = char.Parse(Console.ReadLine()!.ToUpper());
+
+    while (sexo != 'M' && sexo != 'F')
+    {
+        Console.WriteLine($"\nResposta inválida, por favor digite M ou F!");
+        sexo = char.Parse(Console.ReadLine()!.ToUpper());
+    }
 
     if (sexo == 'M')
     {
@@ -61,31 +51,48 @@ for (int i = 1; i <= 10; i++)
     {
         respostaMulheres++;
     }
-    else
+
+    Console.WriteLine($"\n Você gostou do produto? Digite S para SIM ou N para NÃO: ");
+    char produto = char.Parse(Console.ReadLine()!.ToUpper());
+
+    while (produto != 'S' && produto != 'N')
     {
-        Console.WriteLine($"\nResposta inválida, por favor digite M ou F!");
-        sexo = char.Parse(Console.ReadLine()!.ToUpper());
+        Console.WriteLine($"\nResposta inválida, por favor digite S ou N!");
+        produto = char.Parse(Console.ReadLine()!.ToUpper());
     }
 
-    if (sexo == 'F' && produto == 'N')
+    if (produto == 'S')
     {
-        mulheresNAO++;
+        respostaSIM++;
+
     }
-    else if (sexo == 'M' && produto == 'N')
+    else if (produto == 'N')
     {
-        homensNAO++;
-    }
-    else
-    {
+        respostaNAO++;
+
+        if (sexo == 'F')
+        {
+            mulheresNAO++;
+        }
+        else if (sexo == 'M')
+        {
+            homensNAO++;
+        }
+        else { }
     }
 
 }
 
-float porcentagemHomensNAO = 100 * homensNAO / respostaHomens;
-float porcentagemMulheresNAO = 100 * mulheresNAO / respostaMulheres;
+if (respostaHomens == 0)
+{
+    
+}
+
+double porcentagemHomensNAO = Math.Round(100 * (double)homensNAO / (double)respostaHomens, 2);
+double porcentagemMulheresNAO = Math.Round(100 * (double)mulheresNAO / (double)respostaMulheres, 2);
 int totalRespostas = respostaSIM + respostaNAO;
 
-Console.WriteLine($"\n     RESULTADO FINAL DA PESQUISA: \n Total de Respostas:{totalRespostas} \n Mulheres: {respostaMulheres} \n Homens: {respostaHomens} \n Mulheres que responderam NÃO: {mulheresNAO} \n Homens que responderam NÃO: {homensNAO} \n Porcentagem de homens que responderam NÃO: {porcentagemHomensNAO} \n Porcentagem de mulheres que responderam NÃO: {porcentagemMulheresNAO}");
+Console.WriteLine($"\n     RESULTADO FINAL DA PESQUISA: \n Total de Respostas:{totalRespostas} \n Mulheres: {respostaMulheres} \n Homens: {respostaHomens} \n Mulheres que responderam NÃO: {mulheresNAO} \n Homens que responderam NÃO: {homensNAO} \n Porcentagem de homens que responderam NÃO: {porcentagemHomensNAO}% \n Porcentagem de mulheres que responderam NÃO: {porcentagemMulheresNAO}% ");
 
 Console.ResetColor();
 

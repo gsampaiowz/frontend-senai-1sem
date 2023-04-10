@@ -16,66 +16,93 @@ Console.WriteLine($"\n PERGUNTAS SOBRE O CRIME: ");
 Console.WriteLine($"\n Telefonou para a vítima? S ou N");
 char resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
-if (resposta == 'S')
-{
-    respostaSIM++;
-}
-else if (resposta != 'N')
+while (resposta != 'N' && resposta != 'S')
 {
     Console.WriteLine($"Favor responder com S ou N!");
     resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+if (resposta == 'S')
+{
+    respostaSIM++;
 }
 
 Console.WriteLine($"\n Esteve no local do crime? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
-if (resposta == 'S')
-{
-    respostaSIM++;
-}
-else if (resposta != 'N')
+while (resposta != 'N' && resposta != 'S')
 {
     Console.WriteLine($"Favor responder com S ou N!");
     resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+
+if (resposta == 'S')
+{
+    respostaSIM++;
 }
 
 Console.WriteLine($"\n Mora perto da vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
-if (resposta == 'S')
-{
-    respostaSIM++;
-}
-else if (resposta != 'N')
+while (resposta != 'N' && resposta != 'S')
 {
     Console.WriteLine($"Favor responder com S ou N!");
     resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+
+if (resposta == 'S')
+{
+    respostaSIM++;
 }
 
 Console.WriteLine($"\n Devia para a vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
-if (resposta == 'S')
-{
-    respostaSIM++;
-}
-else if (resposta != 'N')
+while (resposta != 'N' && resposta != 'S')
 {
     Console.WriteLine($"Favor responder com S ou N!");
     resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+
+if (resposta == 'S')
+{
+    respostaSIM++;
 }
 
 Console.WriteLine($"\n Já trabalhou com a vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
-if (resposta == 'S')
-{
-    respostaSIM++;
-}
-else if (resposta != 'N')
+while (resposta != 'N' && resposta != 'S')
 {
     Console.WriteLine($"Favor responder com S ou N!");
     resposta = char.Parse(Console.ReadLine()!.ToUpper());
 }
 
-cwl
+
+if (resposta == 'S')
+{
+    respostaSIM++;
+}
+
+Console.WriteLine($"\n     Você é: ");
+
+
+if (respostaSIM == 2)
+{
+    Console.WriteLine($"\n SUSPEITO! \n");
+}
+else if (respostaSIM == 3 || respostaSIM == 4)
+{
+    Console.WriteLine($"\n CÚMPLICE! \n");
+}
+else if (respostaSIM == 5)
+{
+    Console.WriteLine($"\n CULPADO! \n");
+}
+else
+{
+    Console.WriteLine($"\n INOCENTE! \n");
+}

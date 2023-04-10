@@ -15,14 +15,17 @@ for numero = 1; numero <= 500; numero += anterior;
 //? INICIO
 
 int numeroAntesAnterior = 0;
-int numeroAnterior = 0;
+int numeroAnterior = 1;
 
 Console.WriteLine($"Digite o valor máximo para essa sequência de Fibonacci: ");
 int numeroMaximo = int.Parse(Console.ReadLine()!);
 
-for (int numero = 1; numero <= numeroMaximo; numero = numeroAntesAnterior + numeroAnterior)
+int numero = 0;
+do
 {
-    Console.Write($"{numero} => ");
     numeroAntesAnterior = numeroAnterior;
     numeroAnterior = numero;
-}
+    numero = numeroAntesAnterior + numeroAnterior;
+    Console.Write($"{numero} => ");
+} while (numero < numeroMaximo);
+
