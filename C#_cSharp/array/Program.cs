@@ -22,6 +22,8 @@ string[] carros = new string[3];
 Console.WriteLine($"\nDigite o nome do carro: ");
 carros[0] = Console.ReadLine()!;
 
-Console.WriteLine($"\nPrimeiro carro da lista: {carros[0]}");
-Console.WriteLine($"\nSegundo carro da lista: {carros[1]}");
-Console.WriteLine($"\nTerceiro carro da lista: {carros[2]}");
+//? SEM REPETIDOR
+
+// Console.WriteLine($"\nPrimeiro carro da lista: {carros[0]}");
+// Console.WriteLine($"\nSegundo carro da lista: {carros[1]}");
+// Console.WriteLine($"\nTerceiro carro da lista: {carros[2]}");
