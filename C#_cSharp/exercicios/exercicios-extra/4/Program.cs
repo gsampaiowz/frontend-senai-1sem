@@ -29,11 +29,53 @@ else if (resposta != 'N')
 Console.WriteLine($"\n Esteve no local do crime? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
+if (resposta == 'S')
+{
+    respostaSIM++;
+}
+else if (resposta != 'N')
+{
+    Console.WriteLine($"Favor responder com S ou N!");
+    resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
 Console.WriteLine($"\n Mora perto da vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
+
+if (resposta == 'S')
+{
+    respostaSIM++;
+}
+else if (resposta != 'N')
+{
+    Console.WriteLine($"Favor responder com S ou N!");
+    resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
 
 Console.WriteLine($"\n Devia para a vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
 
+if (resposta == 'S')
+{
+    respostaSIM++;
+}
+else if (resposta != 'N')
+{
+    Console.WriteLine($"Favor responder com S ou N!");
+    resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
 Console.WriteLine($"\n Já trabalhou com a vítima? S ou N");
 resposta = char.Parse(Console.ReadLine()!.ToUpper());
+
+if (resposta == 'S')
+{
+    respostaSIM++;
+}
+else if (resposta != 'N')
+{
+    Console.WriteLine($"Favor responder com S ou N!");
+    resposta = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+cwl
