@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = extra
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai\C#_cSharp\exercicios\exercicios-repeticao\extra\
+=======
+build_property.ProjectDir = c:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-repeticao\extra\
+>>>>>>> 1ebafe4aa810e5e0d90d85a6039da567edb32c58
