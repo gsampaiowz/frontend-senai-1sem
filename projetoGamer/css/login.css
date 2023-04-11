@@ -36,6 +36,10 @@ body {
 
 /*! Classes Genéricas */
 
+html{
+  scroll-behavior: smooth;
+}
+
 .layout-grid {
   width: 90%;
   max-width: 992px;

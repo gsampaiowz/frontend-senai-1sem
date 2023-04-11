@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj": {}
+    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj": {
+    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj",
+        "projectUniqueName": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj",
         "projectName": "extra",
-        "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj",
-        "packagesPath": "C:\\Users\\42591939888\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\obj\\",
+        "projectPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\extra.csproj",
+        "packagesPath": "C:\\Users\\Sampaio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-repeticao\\extra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\42591939888\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Sampaio\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

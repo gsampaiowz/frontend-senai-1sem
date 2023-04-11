@@ -1,5 +1,6 @@
 /* ! RODAPÉ */
 
+/* ! MOBILE */
 footer {
   height: 1531px;
 
@@ -15,7 +16,7 @@ footer .gradient {
   background: linear-gradient(to bottom, black, rgba(67, 3, 99, 0.03));
 }
 
-footer .layout-grid {
+footer .gradient .box1 {
   display: flex;
   flex-direction: column;
 }
@@ -147,4 +148,44 @@ footer .gradient .copy small {
   bottom: 40px;
   left: 0;
   right: 0;
+}
+
+/* ! TABLET */
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 1000px;
+  }
+
+  footer .gradient .layout-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 80px;
+    height: 100%;
+  }
+
+  footer .gradient .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 285px;
+  }
+
+  footer .gradient .logo {
+    width: 196px;
+  }
+
+  footer .gradient .desc {
+    font-size: 16px;
+  }
+
+  footer .gradient .links {
+    flex-direction: column;
+  }
+}
+
+/* ! DESKTOP */
+
+@media screen and (min-width: 1200px) {
 }

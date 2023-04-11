@@ -83,13 +83,25 @@ for (int i = 1; i <= 4; i++)
 
 }
 
+double porcentagemHomensNAO = 0;
+double porcentagemMulheresNAO = 0;
+
 if (respostaHomens == 0)
 {
-    
+    porcentagemHomensNAO = 0;
+    porcentagemMulheresNAO = Math.Round(100 * (double)mulheresNAO / (double)respostaMulheres, 2);
+}
+else if (respostaMulheres == 0)
+{
+    porcentagemMulheresNAO = 0;
+    porcentagemHomensNAO = Math.Round(100 * (double)homensNAO / (double)respostaHomens, 2);
+}
+else
+{
+    porcentagemMulheresNAO = Math.Round((double)100 * mulheresNAO / respostaMulheres, 2);
+    porcentagemHomensNAO = Math.Round((double)100 * homensNAO / respostaHomens, 2);
 }
 
-double porcentagemHomensNAO = Math.Round(100 * (double)homensNAO / (double)respostaHomens, 2);
-double porcentagemMulheresNAO = Math.Round(100 * (double)mulheresNAO / (double)respostaMulheres, 2);
 int totalRespostas = respostaSIM + respostaNAO;
 
 Console.WriteLine($"\n     RESULTADO FINAL DA PESQUISA: \n Total de Respostas:{totalRespostas} \n Mulheres: {respostaMulheres} \n Homens: {respostaHomens} \n Mulheres que responderam NÃO: {mulheresNAO} \n Homens que responderam NÃO: {homensNAO} \n Porcentagem de homens que responderam NÃO: {porcentagemHomensNAO}% \n Porcentagem de mulheres que responderam NÃO: {porcentagemMulheresNAO}% ");
