@@ -19,6 +19,6 @@ for (int i = 0; i < idades.GetLength(0); i++)
     Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine($"\n {i + 1}º Pessoa. \n Nome: {nomes[i]}");
     Console.ForegroundColor = ConsoleColor.DarkGreen;
-    Console.WriteLine($" {i + 1}º Pessoa. Idade: {idades[i]}");
+    Console.WriteLine($"Idade: {idades[i]}");
     Console.ResetColor();
 }
