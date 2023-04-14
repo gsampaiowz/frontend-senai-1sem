@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\functions.csproj",
+      "projectUniqueName": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\introducao\\functions.csproj",
       "projectName": "functions",
-      "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\functions.csproj",
+      "projectPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\introducao\\functions.csproj",
       "packagesPath": "C:\\Users\\42591939888\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\obj\\",
+      "outputPath": "C:\\Users\\42591939888\\Desktop\\Senai\\C#_cSharp\\functions\\introducao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\42591939888\\AppData\\Roaming\\NuGet\\NuGet.Config",
