@@ -14,60 +14,139 @@
 *Dica: utilize switch case e funções/métodos para otimizar o algorítimo.
 */
 
-Console.WriteLine($"\nPOSTO SAMPAIO");
+//! V2
 
-Console.WriteLine($"\nEscolha o tipo de combustível: /nDigite 'A' para ÁLCOOL ou 'G' para GASOLINA.");
-char combustivel = char.Parse(Console.ReadLine()!);
-
-Console.WriteLine($"\nAgora, digite a quantidade de litros desejada");
-float litros = float.Parse(Console.ReadLine()!);
-
+float valor = 0;
+float valorDescontado = 0;
+float desconto = 0;
 float precoAlcool = 4.90F;
 float precoGasolina = 5.30F;
 
-if (combustivel == 'A')
+static float CalculoAlcool(float litros, float desconto)
 {
-    while (litros < 0)
-    {
-        Console.WriteLine($"\nValor inválido!");
-
-    }
-    float desconto = 0;
 
     if (litros > 0 && litros <= 20)
     {
-        desconto = (float)3 / 100;
+        return (float)3 / 100;
     }
     else if (litros > 20)
     {
-        desconto = (float)5 / 100;
+        return (float)5 / 100;
     }
-
-    
-
-    float valor = precoAlcool * litros;
-    float valorDescontado = valor - (valor * desconto);
+    return desconto;
 }
-else if (combustivel == 'G')
+
+static float CalculoGasolina(float litros, float desconto)
 {
-    float desconto = 0;
 
     if (litros > 0 && litros <= 20)
     {
-        desconto = (float)4 / 100;
+        return (float)4 / 100;
     }
     else if (litros > 20)
     {
-        desconto = (float)6 / 100;
+        return (float)6 / 100;
     }
-    else
-    {
-        Console.WriteLine($"\nValor inválido!");
-
-    }
-
-    float valor = precoGasolina * litros;
-    float valorDescontado = valor - (valor * desconto);
+    return desconto;
 }
 
-Console.WriteLine($"\n SIM");
+Console.WriteLine($"\nPOSTO SAMPAIO");
+
+Console.WriteLine($"\nEscolha o tipo de combustível: \nDigite 'A' para ÁLCOOL ou 'G' para GASOLINA.");
+char combustivel = char.Parse(Console.ReadLine()!.ToUpper());
+
+while (combustivel != 'A' && combustivel != 'G')
+{
+    Console.WriteLine($"\nOpção inválida! Digite 'A' para ÁLCOOL ou 'G' para GASOLINA!");
+    combustivel = char.Parse(Console.ReadLine()!.ToUpper());
+}
+
+Console.WriteLine($"\nAgora, digite a quantidade de litros desejada:");
+float litros = float.Parse(Console.ReadLine()!);
+
+while (litros < 0)
+{
+    Console.WriteLine($"\nValor inválido! Digite um valor positivo!");
+    litros = float.Parse(Console.ReadLine()!);
+}
+
+switch (combustivel)
+{
+    case 'G':
+        desconto = CalculoGasolina(litros, desconto);
+        valor = precoGasolina * litros;
+        break;
+    case 'A':
+        desconto = CalculoAlcool(litros, desconto);
+        valor = precoAlcool * litros;
+        break;
+    default:
+        break;
+}
+
+
+valorDescontado = valor - (valor * desconto);
+float descontoPorcentagem = desconto * 100;
+Console.WriteLine($"\nValor sem desconto: R$ {valor}\nValor com desconto de {descontoPorcentagem}%: R$ {valorDescontado}");
+
+//! V1
+// float precoAlcool = 4.90F;
+// float precoGasolina = 5.30F;
+// float valor = 0;
+// float valorDescontado = 0;
+
+// Console.WriteLine($"\nPOSTO SAMPAIO");
+
+// Console.WriteLine($"\nEscolha o tipo de combustível: \nDigite 'A' para ÁLCOOL ou 'G' para GASOLINA.");
+// char combustivel = char.Parse(Console.ReadLine()!.ToUpper());
+
+// while (combustivel != 'A' && combustivel != 'G')
+// {
+//     Console.WriteLine($"\nOpção inválida! Digite 'A' para ÁLCOOL ou 'G' para GASOLINA!");
+//     combustivel = char.Parse(Console.ReadLine()!.ToUpper());
+// }
+
+// Console.WriteLine($"\nAgora, digite a quantidade de litros desejada:");
+// float litros = float.Parse(Console.ReadLine()!);
+
+// while (litros < 0)
+// {
+//     Console.WriteLine($"\nValor inválido! Digite um valor positivo!");
+//     litros = float.Parse(Console.ReadLine()!);
+// }
+
+// if (combustivel == 'A')
+// {
+
+//     float desconto = 0;
+
+//     if (litros > 0 && litros <= 20)
+//     {
+//         desconto = (float)3 / 100;
+//     }
+//     else if (litros > 20)
+//     {
+//         desconto = (float)5 / 100;
+//     }
+
+//     valor = precoAlcool * litros;
+//     valorDescontado = valor - (valor * desconto);
+// }
+// else if (combustivel == 'G')
+// {
+//     float desconto = 0;
+
+//     if (litros > 0 && litros <= 20)
+//     {
+//         desconto = (float)4 / 100;
+//     }
+//     else if (litros > 20)
+//     {
+//         desconto = (float)6 / 100;
+//     }
+
+//     valor = precoGasolina * litros;
+//     valorDescontado = valor - (valor * desconto);
+// }
+
+// Console.WriteLine($"\nValor sem desconto: R$ {valor}\nValor com desconto: R$ {valorDescontado}");
