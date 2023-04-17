@@ -5,8 +5,6 @@ float n1 = float.Parse(Console.ReadLine()!);
 Console.WriteLine($"\nDigite o valor do segundo número: ");
 float n2 = float.Parse(Console.ReadLine()!);
 
-
-
 //* criar método para somar 2 números
 
 static float Soma(float n1, float n2)

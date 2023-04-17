@@ -13,7 +13,7 @@
 //*exibir o valor do imposto referente á renda
 
 Console.WriteLine($"\nDigite a sua renda, em reais: ");
-float renda = float.Parse(Console.ReadLine()!);
+float rendimento = float.Parse(Console.ReadLine()!);
 
 static float CalcularImpostoRenda(float renda)
 {
@@ -42,6 +42,6 @@ static float CalcularImpostoRenda(float renda)
     return (renda);
 }
 
-float calculoImpostoRenda = CalcularImpostoRenda(renda);
+float calculoImpostoRenda = CalcularImpostoRenda(rendimento);
 
-Console.WriteLine($"\nDeve pagar imposto de R$ {calculoImpostoRenda}, equivalente a 20% da renda de R$ {renda}.");
+Console.WriteLine($"\nDeve pagar imposto de R$ {calculoImpostoRenda}, devido a sua renda de R$ {rendimento}.");
