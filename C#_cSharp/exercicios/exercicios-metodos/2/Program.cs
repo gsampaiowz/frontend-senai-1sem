@@ -16,14 +16,14 @@
 
 //! V2
 
+float valorDescontado = 0;
+float valor = 0;
 
 const float precoAlcool = 4.90F;
 const float precoGasolina = 5.30F;
 
-static float Calculo(float litros, char combustivel)
+static float CalculoDesconto(float litros, char combustivel)
 {
-    float valor = 0;
-    float valorDescontado = 0;
     float desconto = 0;
     if (combustivel == 'A')
     {
@@ -35,7 +35,6 @@ static float Calculo(float litros, char combustivel)
         {
             return (float)5 / 100;
         }
-        valor = precoAlcool * litros;
     }
     else if (combustivel == 'G')
     {
@@ -47,10 +46,7 @@ static float Calculo(float litros, char combustivel)
         {
             return (float)5 / 100;
         }
-        valor = precoGasolina * litros;
     }
-    valorDescontado = valor - (valor * desconto);
-    float descontoPorcentagem = desconto * 100;
     return desconto;
 }
 
@@ -74,20 +70,20 @@ while (litros < 0)
     litros = float.Parse(Console.ReadLine()!);
 }
 
+float desconto = CalculoDesconto(litros, combustivel);
+
 switch (combustivel)
 {
-    case 'G':
-        valor = precoGasolina * litros;
-        break;
     case 'A':
         valor = precoAlcool * litros;
         break;
-    default:
+    case 'G':
+        valor = precoGasolina * litros;
         break;
 }
 
-desconto = Calculo(litros, desconto, combustivel, valor);
-
+valorDescontado = valor - (valor * desconto);
+float descontoPorcentagem = desconto * 100;
 
 Console.WriteLine($"\nValor sem desconto: R$ {valor}\nValor com desconto de {descontoPorcentagem}%: R$ {valorDescontado}");
 
