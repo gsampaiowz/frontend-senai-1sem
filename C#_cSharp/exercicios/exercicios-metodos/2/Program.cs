@@ -16,37 +16,41 @@
 
 //! V2
 
-float valor = 0;
-float valorDescontado = 0;
-float desconto = 0;
-float precoAlcool = 4.90F;
-float precoGasolina = 5.30F;
 
-static float CalculoAlcool(float litros, float desconto)
+const float precoAlcool = 4.90F;
+const float precoGasolina = 5.30F;
+
+static float Calculo(float litros, char combustivel)
 {
-
-    if (litros > 0 && litros <= 20)
+    float valor = 0;
+    float valorDescontado = 0;
+    float desconto = 0;
+    if (combustivel == 'A')
     {
-        return (float)3 / 100;
+        if (litros > 0 && litros <= 20)
+        {
+            return (float)3 / 100;
+        }
+        else if (litros > 20)
+        {
+            return (float)5 / 100;
+        }
+        valor = precoAlcool * litros;
     }
-    else if (litros > 20)
+    else if (combustivel == 'G')
     {
-        return (float)5 / 100;
+        if (litros > 0 && litros <= 20)
+        {
+            return (float)3 / 100;
+        }
+        else if (litros > 20)
+        {
+            return (float)5 / 100;
+        }
+        valor = precoGasolina * litros;
     }
-    return desconto;
-}
-
-static float CalculoGasolina(float litros, float desconto)
-{
-
-    if (litros > 0 && litros <= 20)
-    {
-        return (float)4 / 100;
-    }
-    else if (litros > 20)
-    {
-        return (float)6 / 100;
-    }
+    valorDescontado = valor - (valor * desconto);
+    float descontoPorcentagem = desconto * 100;
     return desconto;
 }
 
@@ -73,20 +77,18 @@ while (litros < 0)
 switch (combustivel)
 {
     case 'G':
-        desconto = CalculoGasolina(litros, desconto);
         valor = precoGasolina * litros;
         break;
     case 'A':
-        desconto = CalculoAlcool(litros, desconto);
         valor = precoAlcool * litros;
         break;
     default:
         break;
 }
 
+desconto = Calculo(litros, desconto, combustivel, valor);
 
-valorDescontado = valor - (valor * desconto);
-float descontoPorcentagem = desconto * 100;
+
 Console.WriteLine($"\nValor sem desconto: R$ {valor}\nValor com desconto de {descontoPorcentagem}%: R$ {valorDescontado}");
 
 //! V1
