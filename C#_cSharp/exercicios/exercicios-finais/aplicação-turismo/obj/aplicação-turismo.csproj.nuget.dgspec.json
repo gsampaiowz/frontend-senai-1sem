@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\7\\7.csproj": {}
+    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\aplicação-turismo\\aplicação-turismo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\7\\7.csproj": {
+    "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\aplicação-turismo\\aplicação-turismo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\7\\7.csproj",
-        "projectName": "7",
-        "projectPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\7\\7.csproj",
+        "projectUniqueName": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\aplicação-turismo\\aplicação-turismo.csproj",
+        "projectName": "aplicação-turismo",
+        "projectPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\aplicação-turismo\\aplicação-turismo.csproj",
         "packagesPath": "C:\\Users\\Sampaio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\7\\obj\\",
+        "outputPath": "C:\\Users\\Sampaio\\Desktop\\Senai\\C#_cSharp\\exercicios\\exercicios-finais\\aplicação-turismo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sampaio\\AppData\\Roaming\\NuGet\\NuGet.Config"
