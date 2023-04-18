@@ -25,6 +25,13 @@ int escolha = int.Parse(Console.ReadLine()!);
 Console.WriteLine($"Gostaria de acrescentar gelo? sim/não ");
 string gelo = Console.ReadLine()!.ToUpper();
 
+while (gelo != "SIM" && gelo != "NÃO")
+{
+    Console.WriteLine($"Por favor, digite sim ou não");
+    gelo = Console.ReadLine()!.ToUpper();
+}
+
+
 string bebida = string.Empty;
 
 switch (escolha)
@@ -59,14 +66,10 @@ if (gelo == "SIM")
 {
     Console.WriteLine($"O seu pedido é: {bebida} com gelo adicional!");
 }
-else if ( gelo == "NÃO" || gelo == "NAO")
+else if (gelo == "NÃO")
 {
     Console.WriteLine($"O seu pedido é: {bebida} sem gelo adicional.");
 
-}
-else
-{
-    Console.WriteLine($"Por favor, digite sim ou não");
 }
 
 Console.ResetColor();

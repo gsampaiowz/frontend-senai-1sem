@@ -1,0 +1,15 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = imposto_sobre_renda
+<<<<<<< HEAD:C#_cSharp/functions/imposto-sobre-renda/obj/Debug/net7.0/imposto-sobre-renda.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai\C#_cSharp\functions\imposto-sobre-renda\
+=======
+build_property.ProjectDir = c:\Users\Sampaio\Desktop\Senai\C#_cSharp\functions-methods\imposto-sobre-renda\
+>>>>>>> f17e4b22b1c434bdac17e0dcb79e0c888de730f8:C#_cSharp/functions-methods/imposto-sobre-renda/obj/Debug/net7.0/imposto-sobre-renda.GeneratedMSBuildEditorConfig.editorconfig

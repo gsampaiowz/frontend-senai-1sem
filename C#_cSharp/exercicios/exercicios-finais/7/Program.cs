@@ -3,15 +3,15 @@
 //* 15 números, o algoritmo deve escrever esses 15 números lidos na ordem inversa da qual foi
 //* declarado.
 
-float[] numeros = new float[3];
+float[] numeros = new float[15];
 
-for (int i = 0; i < numeros.GetLength(0); i++)
+for (int i = 0; i < numeros.Length; i++)
 {
     Console.WriteLine($"\nDigite o {i + 1}º número: ");
     numeros[i] = float.Parse(Console.ReadLine()!);
 }
 
-for (int x = numeros.GetLength(0) - 1; x >= 0; x--)
+for (int i = numeros.Length - 1; i >= 0; i--)
 {
-    Console.Write($"{numeros[x]}, ");
+    Console.Write($"{numeros[i]}, ");
 }
