@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = functions
-<<<<<<< HEAD:C#_cSharp/functions/introducao/obj/Debug/net7.0/functions.GeneratedMSBuildEditorConfig.editorconfig
-build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai\C#_cSharp\functions\introducao\
-=======
-build_property.ProjectDir = c:\Users\Sampaio\Desktop\Senai\C#_cSharp\functions-methods\introducao\
->>>>>>> f17e4b22b1c434bdac17e0dcb79e0c888de730f8:C#_cSharp/functions-methods/introducao/obj/Debug/net7.0/functions.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai\C#_cSharp\functions-methods\introducao\
