@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = imposto_sobre_renda
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\Sampaio\Desktop\Senai\C#_cSharp\functions-methods\imposto-sobre-renda\
+=======
+build_property.ProjectDir = c:\Users\42591939888\Desktop\Senai\C#_cSharp\functions-methods\imposto-sobre-renda\
+>>>>>>> d885c1e0c62e00589a9a93735768df1420bdf4f2

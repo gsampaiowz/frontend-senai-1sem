@@ -13,6 +13,7 @@ C:\Users\42591939888\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correc
 C:\Users\42591939888\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\correcao-aplicacao.pdb
 C:\Users\42591939888\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\correcao-aplicacao.genruntimeconfig.cache
 C:\Users\42591939888\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\ref\correcao-aplicacao.dll
+<<<<<<< HEAD
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\bin\Debug\net7.0\correcao-aplicacao.exe
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\bin\Debug\net7.0\correcao-aplicacao.deps.json
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\bin\Debug\net7.0\correcao-aplicacao.runtimeconfig.json
@@ -28,3 +29,5 @@ C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-a
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\correcao-aplicacao.pdb
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\correcao-aplicacao.genruntimeconfig.cache
 C:\Users\Sampaio\Desktop\Senai\C#_cSharp\exercicios\exercicios-finais\correcao-aplicacao\obj\Debug\net7.0\ref\correcao-aplicacao.dll
+=======
+>>>>>>> d885c1e0c62e00589a9a93735768df1420bdf4f2
