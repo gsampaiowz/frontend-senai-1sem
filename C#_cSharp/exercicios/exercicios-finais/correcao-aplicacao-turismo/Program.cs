@@ -28,10 +28,10 @@ static bool Login(string senha)
 }
 
 //* declarar as variáveis
-string[] nomes = new string[2];
-string[] origens = new string[2];
-string[] destinos = new string[2];
-string[] datas = new string[2];
+string[] nomes = new string[5];
+string[] origens = new string[5];
+string[] destinos = new string[5];
+string[] datas = new string[5];
 
 bool senhaValida;
 do
