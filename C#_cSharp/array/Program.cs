@@ -77,31 +77,32 @@
 //     Console.WriteLine($"\n{i+1}. O dobro de {numeros[i]} é {numeros[i] * 2}!");
 // }
 
-string[] nomes = new string[5];
-string[] origens = new string[5];
-string[] destinos = new string[5];
-string[] datas = new string[5];
-
-
-
-
+string[] nomes = new string[2];
+string[] origens = new string[2];
+string[] destinos = new string[2];
+string[] datas = new string[2];
 
 for (int i = 0; i < nomes.Length; i++)
 {
-    cadastrarPassagens(nomes, origens, i);
-    Console.WriteLine($"Nome: {nomes[i]}");
-    Console.WriteLine($"Origem: {origens[i]}");
-    Console.WriteLine();
-
+    CadastrarPassagens(nomes, origens, i);
+}
+for (int i = 0; i < nomes.Length; i++)
+{
+    ListarPassagens(nomes, origens, i);
 }
 
-
-
 // Aqui a passagem de parâmetros do array nomes veio por referência!!!!!!!!!!
-static void cadastrarPassagens(string[] ns, string[] os, int pos)
+static void CadastrarPassagens(string[] ns, string[] os, int pos)
 {
-    ns[pos] = "Eduardo";
-    os[pos] = "Rio";
+    Console.WriteLine($"Digite o nome do {pos + 1}º:");
+    ns[pos] = Console.ReadLine()!;
+    Console.WriteLine($"Digite o origem do {pos + 1}º:");
+    os[pos] = Console.ReadLine()!;
+}
+static void ListarPassagens(string[] ns, string[] os, int pos)
+{
+    Console.WriteLine($"Nome do {pos + 1}º: {ns[pos]}");
+    Console.WriteLine($"Origem do {pos + 1}º: {os[pos]}");
 }
 
 

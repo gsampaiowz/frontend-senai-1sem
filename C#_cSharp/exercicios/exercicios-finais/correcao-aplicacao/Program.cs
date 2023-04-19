@@ -42,6 +42,30 @@ do
 
 } while (senhaValida == false);
 
+static void CadastrarPassagens(string[] nomes, string[] origens, string[] destinos, string[] datas, int i)
+{
+    Console.WriteLine($"\nInforme o nome do {i + 1}º: ");
+    nomes[i] = Console.ReadLine()!;
+    Console.WriteLine($"\nInforme a origem do {i + 1}º: ");
+    origens[i] = Console.ReadLine()!;
+    Console.WriteLine($"\nInforme o destino do {i + 1}º: ");
+    destinos[i] = Console.ReadLine()!;
+    Console.WriteLine($"\nInforme a data do {i + 1}º: ");
+    datas[i] = Console.ReadLine()!;
+}
+static void ListarPassagens(string[] nomes, string[] origens, string[] destinos, string[] datas, int i)
+{
+    Console.WriteLine(@$"
+            *******************
+            Passagens - Bilhete {i + 1}
+            Nome: {nomes[i]}
+            Origem: {origens[i]}
+            Destino: {destinos[i]}
+            Data: {datas[i]}");
+    Thread.Sleep(3000);
+
+}
+
 //* criar menu de opções
 string opcao;
 do
@@ -54,7 +78,6 @@ Selecione uma das opções
 [0] - Sair
 ");
     opcao = Console.ReadLine()!;
-
     switch (opcao)
     {
         case "1":
@@ -63,14 +86,7 @@ Selecione uma das opções
             {
                 for (var i = 0; i < nomes.Length; i++)
                 {
-                    Console.WriteLine($"\nInforme o nome do {i + 1}º: ");
-                    nomes[i] = Console.ReadLine()!;
-                    Console.WriteLine($"\nInforme a origem do {i + 1}º: ");
-                    origens[i] = Console.ReadLine()!;
-                    Console.WriteLine($"\nInforme o destino do {i + 1}º: ");
-                    destinos[i] = Console.ReadLine()!;
-                    Console.WriteLine($"\nInforme a data do {i + 1}º: ");
-                    datas[i] = Console.ReadLine()!;
+                    CadastrarPassagens(nomes, origens, destinos, datas, i);
                 }
                 Console.WriteLine($"\nDeseja cadastrar mais passagens? s/n");
                 maisPassagem = Console.ReadLine()!.ToLower();
@@ -80,14 +96,7 @@ Selecione uma das opções
         case "2":
             for (var i = 0; i < nomes.Length; i++)
             {
-                Console.WriteLine(@$"
-            *******************
-            Passagens - Bilhete {i + 1}
-            Nome: {nomes[i]}
-            Origem: {origens[i]}
-            Destino: {destinos[i]}
-            Data: {datas[i]}");
-                Thread.Sleep(3000);
+                ListarPassagens(nomes, origens, destinos, datas, i);
             }
             break;
         case "0":
