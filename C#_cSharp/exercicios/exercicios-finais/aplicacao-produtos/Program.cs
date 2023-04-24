@@ -5,8 +5,8 @@ string[] nomes = new string[tamanhoArrays];
 float[] precos = new float[tamanhoArrays];
 bool[] promocoes = new bool[tamanhoArrays];
 
-int posFinal = 0;
-static void CadastrarProduto(string[] nomes, float[] precos, bool[] promocoes, int pos, int posFinal)
+int proxPosicao = 1;
+static void CadastrarProduto(string[] nomes, float[] precos, bool[] promocoes, int pos)
 {
     Console.WriteLine($"\nDigite o nome do produto: ");
     nomes[pos] = Console.ReadLine()!;
@@ -28,7 +28,7 @@ static void CadastrarProduto(string[] nomes, float[] precos, bool[] promocoes, i
     } while (promocao != "s" && promocao != "n");
 }
 
-static void ListarProdutos(string[] nomes, float[] precos, bool[] promocoes, int pos, int posFinal)
+static void ListarProdutos(string[] nomes, float[] precos, bool[] promocoes, int pos)
 {
 
     if (promocoes[pos])
@@ -58,44 +58,50 @@ Menu de opções
 [0] - Encerrar programa
 ");
     opcao = Console.ReadLine()!;
-    Console.WriteLine($"-----------------------------------");
+    Console.WriteLine($"--------------------------------------------------------------------------");
     switch (opcao)
     {
         case "1":
             Console.ForegroundColor = ConsoleColor.Green;
-            string maisCadastro;
+            string maisCadastro = "s";
+            int i;
             do
             {
-                for (var i = posFinal; i < posFinal + 1; i++)
+                for (i = 0; i < proxPosicao; i++)
                 {
-                    if (i == tamanhoArrays)
+                    if (i < tamanhoArrays && maisCadastro == "s")
                     {
-                        Console.WriteLine($"\nImpossível cadastrar mais produtos. Limite atingido!");
-                        break;
+                        CadastrarProduto(nomes, precos, promocoes, i);
+                        proxPosicao++;
+                        Console.WriteLine($"\nQuer cadastrar mais um produto? ");
+                        maisCadastro = Console.ReadLine()!;
                     }
-                    while (i < tamanhoArrays)
-                    {
-                        CadastrarProduto(nomes, precos, promocoes, i, posFinal);
-                    }
-
-
                 }
-                posFinal++;
-                Console.WriteLine($"\nQuer cadastrar mais um produto? ");
-                maisCadastro = Console.ReadLine()!;
+                if (maisCadastro == "s")
+                {
+                    Console.WriteLine($"\nImpossível cadastrar mais produtos. Limite atingido!");
+                    maisCadastro = "n";
+                }
             } while (maisCadastro == "s");
-
             break;
         case "2":
             Console.ForegroundColor = ConsoleColor.Yellow;
-            for (var i = 0; i < posFinal; i++)
+            if (proxPosicao == 1)
             {
-                ListarProdutos(nomes, precos, promocoes, i, posFinal);
+                Console.WriteLine($"\nNão há produtos cadastrados!");
+            }
+            else
+            {
+                for (i = 0; i < proxPosicao - 1; i++)
+                {
+                    ListarProdutos(nomes, precos, promocoes, i);
+                    Thread.Sleep(1500);
+                }
             }
             break;
         case "0":
             Console.WriteLine($"\nEncerrando...");
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             Console.WriteLine($"\nPrograma encerrado.");
             break;
         default:
