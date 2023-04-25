@@ -38,10 +38,9 @@ static float CalcularImpostoRenda(float renda)
     {
         return (float)35 / 100 * renda;
     }
-
-    return (renda);
+    return 0;
 }
 
-float calculoImpostoRenda = CalcularImpostoRenda(rendimento);
+float impostoRenda = CalcularImpostoRenda(rendimento);
 
-Console.WriteLine($"\nDeve pagar imposto de R$ {calculoImpostoRenda}, devido a sua renda de R$ {rendimento}.");
+Console.WriteLine($"\nDeve pagar imposto de R$ {impostoRenda}, devido a sua renda de R$ {rendimento}.");

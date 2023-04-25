@@ -590,6 +590,11 @@ main .noticias .blur .container-noticias .noticia-box p {
 
   main .jogos .jogos-flex .imagem-box .box-blur .box-button {
     height: 57px;
+    margin-left: 100px;
+  }
+
+  main .jogos .jogos-flex .imagem-box .box-blur .box-button a {
+    font-size: 20px;
   }
 
   main .progamer {
@@ -603,7 +608,8 @@ main .noticias .blur .container-noticias .noticia-box p {
 
   main .progamer .progamer-flex .articles {
     flex-direction: row;
-    margin-top: 0;
+    height: 692px;
+    margin-top: 200px;
   }
 
   main .progamer .progamer-flex .articles .box-blur {
@@ -624,6 +630,7 @@ main .noticias .blur .container-noticias .noticia-box p {
     bottom: 100px;
     width: 425px;
     height: 692px;
+    margin-right: 0;
     background-size: cover;
   }
 
@@ -642,5 +649,23 @@ main .noticias .blur .container-noticias .noticia-box p {
   main .progamer .progamer-flex .articles .professores .profs-box {
     bottom: 65px;
     left: -60px;
+  }
+
+  main .noticias {
+    height: 1175px;
+  }
+  main .noticias .blur .noticia-titulo h2 {
+    font-size: 40px;
+  }
+  main .noticias .blur .noticia-titulo hr {
+    margin-top: 25px;
+  }
+  main .noticias .blur .container-noticias .noticia-box {
+    width: 285px;
+    height: 387px;
+    margin-bottom: 50px;
+  }
+  main .noticias .blur .container-noticias {
+    gap: 20px;
   }
 }

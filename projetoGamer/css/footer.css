@@ -157,12 +157,25 @@ footer .gradient .copy small {
     height: 1000px;
   }
 
-  footer .gradient .layout-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
+  footer .layout-grid {
+    max-width: 85%;
+  }
+
+  footer .gradient .footer-flex {
     display: flex;
-    gap: 80px;
-    height: 100%;
+    flex-direction: column;
+    gap: 150px;
+  }
+
+  footer .gradient .footer-flex .primeira-linha {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+  }
+  footer .gradient .footer-flex .segunda-linha {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
   }
 
   footer .gradient .box1,
@@ -176,16 +189,52 @@ footer .gradient .copy small {
     width: 196px;
   }
 
+  footer .gradient .title {
+    margin-top: 0;
+  }
+
+  footer .gradient .box2 {
+    margin-top: 80px;
+  }
+
   footer .gradient .desc {
     font-size: 16px;
   }
 
   footer .gradient .links {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
 /* ! DESKTOP */
 
 @media screen and (min-width: 1200px) {
+  footer {
+    height: 520px;
+    background: url(../assets/images/backgroung_footer_desktop.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  footer .gradient {
+    height: 212px;
+  }
+  footer .gradient .footer-flex {
+    gap: 100px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .gradient .footer-flex .primeira-linha {
+    gap: 40px;
+  }
+  footer .gradient .footer-flex .segunda-linha {
+    gap: 0;
+  }
+  footer .gradient .logo {
+    margin-top: 0;
+  }
+  footer .gradient .box2 {
+    margin-top: 0;
+  }
 }

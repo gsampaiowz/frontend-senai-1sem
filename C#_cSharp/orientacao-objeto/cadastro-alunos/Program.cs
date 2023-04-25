@@ -23,28 +23,13 @@ aluno.rg = Console.ReadLine()!;
 Console.WriteLine($"\nO aluno é bolsista? s/n");
 string validarBolsa = Console.ReadLine()!.ToLower();
 
-if (validarBolsa == "s") { aluno.bolsista = true; } else { aluno.bolsista = false; }
+aluno.bolsista = validarBolsa == "s";
 
 Console.WriteLine($"\nDigite a média final do aluno: (de 0 a 10)");
 aluno.mediaFinal = float.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"\nDigite o valor da mensalidade do aluno: (valor positivo)");
 aluno.valorMensalidade = float.Parse(Console.ReadLine()!);
-
-float desconto = 0;
-if (aluno.bolsista == true)
-{
-    if (aluno.mediaFinal >= 8)
-    {
-        desconto = (float)50 / 100;
-    }
-    else if (aluno.mediaFinal > 6 && aluno.mediaFinal < 8)
-    {
-        desconto = (float)30 / 100;
-    }
-}
-float valorDescontado = aluno.valorMensalidade * desconto;
-aluno.valorMensalidade -= valorDescontado;
 
 string opcao;
 do
