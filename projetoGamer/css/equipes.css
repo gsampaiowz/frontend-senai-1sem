@@ -107,7 +107,7 @@ main .banner .cadastro-box {
 
   background-image: linear-gradient(
     to right bottom,
-    rgba(27, 20, 38, 0.6),
+    rgb(56 37 60),
     rgba(60, 3, 65, 0.38)
   );
   border-radius: 8px;
@@ -297,4 +297,45 @@ main .banner table tbody tr td {
 
 main .banner table td:last-of-type {
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  main .banner {
+    height: 1360px;
+    background-position: center;
+  }
+  main .banner .cadastro-box {
+    width: 680px;
+  }
+  main .banner .cadastro-box .input-box {
+    width: 500px;
+  }
+  main .banner .cadastro-box h1 {
+    margin-top: 40px;
+    font-size: 40px;
+  }
+  main .banner .cadastro-box .flex-file label {
+    width: 260px;
+    text-align: center;
+  }
+  main .banner .cadastro-box .flex-file {
+    justify-content: space-between;
+    width: 500px;
+  }
+  main .banner .cadastro-box .flex-file input {
+    font-size: 14px;
+    width: 200px;
+  }
+  main .banner table tbody tr {
+    height: 100px;
+  }
+  main .banner table {
+    width: 680px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    margin-top: 0;
+  }
 }
