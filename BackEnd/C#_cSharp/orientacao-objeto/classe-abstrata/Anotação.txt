@@ -9,8 +9,8 @@ POO - Programação Orientada à Objetos
 ___________________________________________
 
 
-SobreCarga => Escrever o mesmo método com quantidade de parâmetros diferente
-SobreEscrita => 
+SobreCarga => Escrever o mesmo método com quantidade de parâmetros diferente, usa-se Override
+SobreEscrita => Escrever o mesmo método com conteúdo diferente, usa-se Virtual
 
 // Estrutura
 Acessor Tipo Nome = Valor
