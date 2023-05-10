@@ -2,8 +2,8 @@ namespace construtores
 {
     public class Produto
     {
-        public string Codigo { get; set; }
-        public string Nome { get; set; }
+        public string Codigo { get; set; } = string.Empty;
+        public string Nome { get; set; } = string.Empty;
         public float Preco { get; set; }
         
         
@@ -13,7 +13,7 @@ namespace construtores
         }
         public Produto(string codigo)
         {
-            Console.WriteLine($"\nGOL do BENZEMA!");
+            Codigo = codigo;
         }
         public Produto(string codigo, string nome, float preco)
         {
