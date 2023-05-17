@@ -7,16 +7,19 @@ namespace cadastro_produtos
         public string NomeMarca { get; private set; }
         public DateTime DataCadastro { get; private set; } = DateTime.Now;
 
+        public List<Marca> ListaDeMarcas = new List<Marca>();
         //Métodos
-        public string Cadastrar(Marca _marca)
+        public Marca Cadastrar(Marca marca)
+        {
+            Marca novaMarca = new Marca();
+
+            return novaMarca;
+        }
+        public void Listar()
         {
 
         }
-        public List<Marca> Listar()
-        {
-
-        }
-        public string Deletar(Marca _marca)
+        public void Deletar(int codigo)
         {
 
         }

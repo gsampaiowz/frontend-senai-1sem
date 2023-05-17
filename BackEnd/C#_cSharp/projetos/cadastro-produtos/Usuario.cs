@@ -3,18 +3,25 @@ namespace cadastro_produtos
     public class Usuario
     {
         //Propriedades
-        public int Codigo { get; private set; }
-        public string Nome { get; private set; }
-        public string Email { get; private set; }
-        public string Senha { get; private set; }
+        public int Codigo { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
         public DateTime DataCadastro { get; set; } = DateTime.Now;
 
         //Métodos
-        public string Cadastrar(Usuario _marca)
+        public Usuario()
         {
-
+            Cadastrar();
         }
-        public string Deletar(Usuario _marca)
+        public void Cadastrar(string _nome, string _email, string _senha, DateTime _dataCadastro)
+        {
+            this.Nome = _nome;
+            this.Email = _email;
+            this.Senha = _senha;
+            this.DataCadastro = _dataCadastro;
+        }
+        public string Deletar(Usuario usuario)
         {
 
         }
