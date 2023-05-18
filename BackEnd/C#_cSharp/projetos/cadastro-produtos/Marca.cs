@@ -3,24 +3,54 @@ namespace cadastro_produtos
     public class Marca
     {
         //Propriedades
-        public int Codigo { get; private set; }
-        public string NomeMarca { get; private set; }
-        public DateTime DataCadastro { get; private set; } = DateTime.Now;
-
-        public List<Marca> ListaDeMarcas = new List<Marca>();
+        public int Codigo { get; set; }
+        public string NomeMarca { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public static List<Marca> ListaDeMarcas = new List<Marca>();
         //Métodos
-        public Marca Cadastrar(Marca marca)
+        public Marca(int _codigo, string _nomeMarca)
         {
-            Marca novaMarca = new Marca();
-
-            return novaMarca;
+            Codigo = _codigo;
+            NomeMarca = _nomeMarca;
+            DataCadastro = DateTime.Today;
         }
-        public void Listar()
-        {
 
-        }
-        public void Deletar(int codigo)
+        public Marca()
         {
+        }
+
+        public static void Cadastrar()
+        {
+            Console.WriteLine($"\nDigite o código da marca:");
+            int codigo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"\nDigite o nome da marca:");
+            string nome = Console.ReadLine();
+
+            ListaDeMarcas.Add(new Marca(codigo, nome));
+        }
+        public static void Listar()
+        {
+            if (ListaDeMarcas.Count > 0)
+            {
+                foreach (Marca marca in ListaDeMarcas)
+                {
+                    Console.WriteLine(@$"
+                    Lista de Marcas
+                    Código: {marca.Codigo}
+                    Nome: {marca.NomeMarca}
+                    Data de cadastro: {marca.DataCadastro}");
+
+                }
+            }
+        }
+        public static void Deletar(int codigo)
+        {
+            Marca removida = ListaDeMarcas.Find(x => x.Codigo == codigo);
+            int index = ListaDeMarcas.IndexOf(removida);
+            ListaDeMarcas.RemoveAt(index);
+
+            Console.WriteLine($"\nMarca sumiu.");
 
         }
     }

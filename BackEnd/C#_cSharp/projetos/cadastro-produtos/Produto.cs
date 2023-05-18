@@ -8,28 +8,43 @@ namespace cadastro_produtos
         public float Preco { get; set; }
         public DateTime DataCadastro { get; set; }
         public Marca Marca = new Marca();
-        public Usuario CadastradoPor { get; set; }
+        public string CadastradoPor { get; set; }
         //Instanciando Lista
-        public List<Produto> ListaDeProdutos = new List<Produto>();
+        public static List<Produto> ListaDeProdutos = new List<Produto>();
 
         //Método construtor para atribuir valores
-        public Produto(int _codigo, string _nomeProduto, float _preco, DateTime _dataCadastro, Marca _marca, Usuario _cadastradoPor)
+        public Produto()
         {
-            this.Codigo = _codigo;
-            this.NomeProduto = _nomeProduto;
-            this.Preco = _preco;
-            this.DataCadastro = _dataCadastro;
-            this.Marca = _marca;
-            this.CadastradoPor = _cadastradoPor;
+
+        }
+
+        public Produto(int _codigo, string _nomeProduto, float _preco)
+        {
+            Codigo = _codigo;
+            NomeProduto = _nomeProduto;
+            Preco = _preco;
+            DataCadastro = DateTime.Today;
+            Usuario user = new Usuario();
+            CadastradoPor = user.Nome;
         }
 
         //Métodos
-        public string Cadastrar(Produto _produto)
+        public static void CadastrarProduto()
         {
-            ListaDeProdutos.Add(_produto);
-            return _produto.ToString();
+            Console.WriteLine($"\nDigite o código do produto:");
+            int codigoDigitado = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"\nDigite o nome do produto:");
+            string nomeDigitado = Console.ReadLine();
+
+            Console.WriteLine($"\nDigite o preço do produto:");
+            float precoDigitado = float.Parse(Console.ReadLine());
+
+            ListaDeProdutos.Add(
+                new Produto(codigoDigitado, nomeDigitado, precoDigitado)
+            );
         }
-        public void Listar()
+        public static void Listar()
         {
             if (ListaDeProdutos.Count > 0)
             {
@@ -38,9 +53,9 @@ namespace cadastro_produtos
                     Console.WriteLine(@$"
                     Codigo = {p.Codigo}
                     NomeProduto = {p.NomeProduto}
-                    Preco = {p.Preco}
+                    Preco = {p.Preco:C2}
                     DataCadastro = {p.DataCadastro}
-                    Marca = {p.Marca}
+                    Marca = {p.Marca.NomeMarca}
                     CadastradoPor = {p.CadastradoPor}");
                 }
             }
@@ -49,9 +64,14 @@ namespace cadastro_produtos
                 Console.WriteLine($"\nLista Vazia!");
             }
         }
-        public string Deletar(int codigo)
+        public static void Deletar(int codigo)
         {
-            return ListaDeProdutos.Remove(p.Codigo).ToString();
+            Produto removido = ListaDeProdutos.Find(x => x.Codigo == codigo);
+            int index = ListaDeProdutos.IndexOf(removido);
+            ListaDeProdutos.RemoveAt(index);
+
+            Console.WriteLine($"\nProduto foi pra casa do cabrunco feio.");
+
         }
     }
 }

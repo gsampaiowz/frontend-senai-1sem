@@ -3,7 +3,7 @@ namespace cadastro_produtos
     public class Login
     {
         //Propriedades
-        public bool Logado { get; private set; }
+        public bool Logado { get; set; }
 
         //Métodos
         public Login()
@@ -19,22 +19,25 @@ namespace cadastro_produtos
         }
         public void Logar(Usuario usuario)
         {
-            Console.WriteLine($"\nDigite seu email:");
-            string emailDigitado = Console.ReadLine();
-
-            Console.WriteLine($"\nDigite a senha:");
-            string senhaDigitada = Console.ReadLine();
-
-            if (emailDigitado == usuario.Email && senhaDigitada == usuario.Senha)
+            do
             {
-                this.Logado = true;
-                Console.WriteLine($"\nLogin efetuado com sucesso!");
-            }
-            else
-            {
-                this.Logado = false;
-                Console.WriteLine($"\nDados incorretos!");
-            }
+                Console.WriteLine($"\nDigite seu email:");
+                string emailDigitado = Console.ReadLine();
+
+                Console.WriteLine($"\nDigite a senha:");
+                string senhaDigitada = Console.ReadLine();
+
+                if (emailDigitado == usuario.Email && senhaDigitada == usuario.Senha)
+                {
+                    this.Logado = true;
+                    Console.WriteLine($"\nLogin efetuado com sucesso!");
+                }
+                else
+                {
+                    this.Logado = false;
+                    Console.WriteLine($"\nDados incorretos!");
+                }
+            } while (this.Logado == false);
         }
         public void Deslogar(Usuario usuario)
         {
@@ -44,10 +47,9 @@ namespace cadastro_produtos
         }
         public void GerarMenu()
         {
-            Produto p = new Produto();
-            Marca marca = new Marca();
 
-            string opcao = string.Empty;
+            string opcao;
+
             do
             {
                 Console.WriteLine(@$"
@@ -66,26 +68,26 @@ namespace cadastro_produtos
                 switch (opcao)
                 {
                     case "1":
-                        p.Cadastrar();
+                        Produto.CadastrarProduto();
                         break;
                     case "2":
-                        p.Listar();
+                        Produto.Listar();
                         break;
                     case "3":
                         Console.WriteLine($"\nInforme o código do produto que deseja remover: ");
                         int codigoProduto = int.Parse(Console.ReadLine());
-                        p.Deletar(codigoProduto);
+                        Produto.Deletar(codigoProduto);
                         break;
                     case "4":
-                        marca.Cadastrar();
+                        Marca.Cadastrar();
                         break;
                     case "5":
-                        marca.Listar();
+                        Marca.Listar();
                         break;
                     case "6":
                         Console.WriteLine($"\nInforme o código da marca que deseja remover: ");
                         int codigoMarca = int.Parse(Console.ReadLine());
-                        marca.Deletar(codigoMarca);
+                        Marca.Deletar(codigoMarca);
                         break;
                     case "0":
                         Console.WriteLine($"\nSaindo da aplicação...");
@@ -96,10 +98,9 @@ namespace cadastro_produtos
                         Console.WriteLine($"\nOpção inválida.");
                         break;
                 }
-            } while (opcao != "0")
-
-
-
+            } while (opcao != "0");
         }
+
+
     }
 }
