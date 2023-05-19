@@ -6,11 +6,12 @@ namespace cadastro_produtos
         public int Codigo { get; set; }
         public string NomeProduto { get; set; }
         public float Preco { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public Marca Marca = new Marca();
+        public DateOnly DataCadastro { get; set; }
+        public string MarcaProduto { get; set; }
         public string CadastradoPor { get; set; }
         //Instanciando Lista
         public static List<Produto> ListaDeProdutos = new List<Produto>();
+
 
         //Método construtor para atribuir valores
         public Produto()
@@ -18,14 +19,14 @@ namespace cadastro_produtos
 
         }
 
-        public Produto(int _codigo, string _nomeProduto, float _preco)
+        public Produto(int _codigo, string _nomeProduto, float _preco, string _nomeMarca)
         {
             Codigo = _codigo;
             NomeProduto = _nomeProduto;
             Preco = _preco;
-            DataCadastro = DateTime.Today;
-            Usuario user = new Usuario();
-            CadastradoPor = user.Nome;
+            DataCadastro = DateOnly.FromDateTime(DateTime.Today);
+            CadastradoPor = Usuario.Nome;
+            MarcaProduto = _nomeMarca;
         }
 
         //Métodos
@@ -40,9 +41,27 @@ namespace cadastro_produtos
             Console.WriteLine($"\nDigite o preço do produto:");
             float precoDigitado = float.Parse(Console.ReadLine());
 
-            ListaDeProdutos.Add(
-                new Produto(codigoDigitado, nomeDigitado, precoDigitado)
-            );
+
+
+            bool codigoExiste = true;
+            do
+            {
+                try
+                {
+                    Console.WriteLine($"\nDigite o código da marca do produto:");
+                    int codigoMarca = int.Parse(Console.ReadLine());
+                    Marca codigoBuscado = Marca.ListaDeMarcas.Find(x => x.Codigo == codigoMarca);
+                    ListaDeProdutos.Add(
+                    new Produto(codigoDigitado, nomeDigitado, precoDigitado, codigoBuscado.NomeMarca)
+                );
+                }
+                catch (System.Exception ex)
+                {
+                    //TODO
+                    codigoExiste = false;
+                    Console.WriteLine($"\nNenhuma marca encontrada com o código digitado.");
+                }
+            } while (codigoExiste == false);
         }
         public static void Listar()
         {
@@ -55,7 +74,7 @@ namespace cadastro_produtos
                     NomeProduto = {p.NomeProduto}
                     Preco = {p.Preco:C2}
                     DataCadastro = {p.DataCadastro}
-                    Marca = {p.Marca.NomeMarca}
+                    Marca = {p.MarcaProduto}
                     CadastradoPor = {p.CadastradoPor}");
                 }
             }

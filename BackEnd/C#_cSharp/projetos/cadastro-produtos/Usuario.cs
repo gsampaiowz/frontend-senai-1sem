@@ -4,12 +4,12 @@ namespace cadastro_produtos
     {
         //Propriedades
         public int Codigo { get; set; }
-        public string Nome { get; set; } = string.Empty;
+        public static string Nome { get; set; } = string.Empty;
         public string Email { get; set; }
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
 
-        List<Usuario> users = new List<Usuario>();
+        public List<Usuario> users = new List<Usuario>();
         //Métodos
         public Usuario(string _nome, string _email, string _senha)
         {
@@ -21,7 +21,7 @@ namespace cadastro_produtos
         }
         public Usuario()
         {
-            if (this.Nome == string.Empty)
+            if (Nome == string.Empty)
             {
                 Cadastrar();
             }
@@ -37,7 +37,7 @@ namespace cadastro_produtos
             Console.WriteLine($"\nDigite a senha:");
             string senhaDigitada = Console.ReadLine();
 
-            this.Nome = nomeDigitado;
+            Nome = nomeDigitado;
             this.Email = emailDigitado;
             this.Senha = senhaDigitada;
             DataCadastro = DateTime.Now;

@@ -3,7 +3,7 @@ namespace cadastro_produtos
     public class Marca
     {
         //Propriedades
-        public int Codigo { get; set; }
+        public int Codigo { get; set; } = 0;
         public string NomeMarca { get; set; }
         public DateTime DataCadastro { get; set; }
         public static List<Marca> ListaDeMarcas = new List<Marca>();
