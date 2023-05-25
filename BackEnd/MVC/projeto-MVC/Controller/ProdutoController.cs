@@ -17,6 +17,12 @@ namespace projeto_MVC.Controller
 
             //chamada da View passandoa a lista
             produtoView.Listar(produtos);
+
+        }
+        public void CadastrarProduto()
+        {
+            Produto novoProduto = produtoView.Cadastrar();
+            produto.Inserir(novoProduto);
         }
     }
 }

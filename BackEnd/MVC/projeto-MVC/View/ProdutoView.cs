@@ -15,21 +15,24 @@ namespace projeto_MVC.View
                 Console.WriteLine(@$"
                 Código: {produto.Codigo}
                 Nome: {produto.Nome}
-                Preço: {produto.Preco}");
+                Preço: {produto.Preco:C2}");
 
             }
         }
-
-        public void Cadastrar(Produto produto)
+        public Produto Cadastrar()
         {
+            Produto novoProduto = new Produto();
+
             Console.WriteLine($"\nPágina de cadastro");
             Console.WriteLine($"\nDigite o código:");
-            string? codigo = Console.ReadLine();
+            novoProduto.Codigo = int.Parse(Console.ReadLine()!);
             Console.WriteLine($"\nDigite o nome:");
-            string? nome = Console.ReadLine();
+            novoProduto.Nome = Console.ReadLine();
             Console.WriteLine($"\nDigite o preço:");
-            string? preco = Console.ReadLine();
-    
+            novoProduto.Preco = float.Parse(Console.ReadLine()!);
+
+            return novoProduto;
+
         }
     }
 }
