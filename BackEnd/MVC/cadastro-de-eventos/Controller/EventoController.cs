@@ -16,6 +16,13 @@ namespace cadastro_de_eventos.Controller
             List<Evento> eventos = evento.Ler();
 
             //chamada da View passando a lista
+            eventoView.Listar(eventos);
+        }
+        //método controlador para acessar o cadastro dos dados
+        public void CadastrarEvento()
+        {
+            Evento novoEvento = eventoView.Cadastrar();
+            evento.Inserir(novoEvento);
         }
     }
 }
