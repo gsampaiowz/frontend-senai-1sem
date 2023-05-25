@@ -8,7 +8,6 @@ namespace projeto_MVC.View
         public void Listar(List<Produto> produtos)
         {
             Console.WriteLine($"\nLista de produtos");
-            Console.WriteLine(produtos.Count());
 
             foreach (var produto in produtos)
             {
