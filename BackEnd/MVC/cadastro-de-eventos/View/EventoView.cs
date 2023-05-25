@@ -8,7 +8,16 @@ namespace cadastro_de_eventos.View
         public void Listar(List<Evento> eventos)
         {
             Console.WriteLine($"\nLista de eventos");
-            Console.WriteLine();
+
+            foreach (var evento in eventos)
+            {
+                Console.WriteLine(@$"
+            Nome: {evento.Nome}
+            Descrição: {evento.Descricao}
+            Preço: {evento.Data}");
+
+            }
         }
+        //
     }
 }

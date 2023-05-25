@@ -18,6 +18,7 @@ namespace projeto_MVC.View
 
             }
         }
+        //método para cadastrar dados
         public Produto Cadastrar()
         {
             Produto novoProduto = new Produto();
