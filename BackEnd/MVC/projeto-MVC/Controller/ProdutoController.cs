@@ -15,7 +15,7 @@ namespace projeto_MVC.Controller
             //chamada da Model trazendo a lista
             List<Produto> produtos = produto.Ler();
 
-            //chamada da View passandoa a lista
+            //chamada da View passando a lista
             produtoView.Listar(produtos);
 
         }

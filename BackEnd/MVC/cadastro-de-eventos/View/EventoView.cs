@@ -18,6 +18,18 @@ namespace cadastro_de_eventos.View
 
             }
         }
-        //
+        //método para cadastrar dados
+        public Evento Cadastrar()
+        {
+            Evento novoEvento = new Evento();
+
+            Console.WriteLine($"\nPágina de cadastro");
+            Console.WriteLine($"\nDigite o nome do evento:");
+            novoEvento.Nome = Console.ReadLine();
+            Console.WriteLine($"\nDigite o nome do evento:");
+            novoEvento.Descricao = Console.ReadLine();
+
+            return novoEvento;
+        }
     }
 }
