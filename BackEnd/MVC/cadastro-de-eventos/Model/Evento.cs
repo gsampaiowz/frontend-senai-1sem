@@ -3,6 +3,7 @@ namespace cadastro_de_eventos.Model
     public class Evento
     {
         //propriedades 
+        public int Codigo { get; set; }
         public string? Nome { get; set; }
         public string? Descricao { get; set; }
         public DateOnly Data { get; set; } = DateOnly.FromDateTime(DateTime.Today);
