@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pH6xZAr/PQGQ/nX7Bu6Uq8yBpBTC0C/hWNBWNoMtcmM=",
+  "Hash": "ozCtyLgEMpro0uo6ww/aNeGkY2+XPdcH/V0ADnODMBQ=",
   "Source": "projeto-gamer",
   "BasePath": "_content/projeto-gamer",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\Equipe\\flamengo.png",
+      "SourceId": "projeto-gamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer",
+      "RelativePath": "Equipe/flamengo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Equipe\\flamengo.png"
+    },
+    {
       "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\favicon.ico",
       "SourceId": "projeto-gamer",
       "SourceType": "Discovered",
@@ -83,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\flamengo.png",
+      "SourceId": "projeto-gamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer",
+      "RelativePath": "img/Equipes/flamengo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\flamengo.png"
+    },
+    {
+      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\padrao.png",
+      "SourceId": "projeto-gamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer",
+      "RelativePath": "img/Equipes/padrao.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\padrao.png"
     },
     {
       "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\js\\site.js",

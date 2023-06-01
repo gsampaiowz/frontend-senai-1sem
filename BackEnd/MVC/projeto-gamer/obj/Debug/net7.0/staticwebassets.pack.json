@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\projeto-gamer.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\Equipe\\flamengo.png",
+      "PackagePath": "staticwebassets\\Equipe\\flamengo.png"
+    },
+    {
       "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\flamengo.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\flamengo.png"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\padrao.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\padrao.png"
     },
     {
       "Id": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\js\\site.js",
