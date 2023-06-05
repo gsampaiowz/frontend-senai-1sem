@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ozCtyLgEMpro0uo6ww/aNeGkY2+XPdcH/V0ADnODMBQ=",
+  "Hash": "Sd1V1eYwIWo+Fp2IvTp7ufMU/Ullb1TAaMTH+8IDamc=",
   "Source": "projeto-gamer",
   "BasePath": "_content/projeto-gamer",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\Equipe\\flamengo.png",
-      "SourceId": "projeto-gamer",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
-      "BasePath": "_content/projeto-gamer",
-      "RelativePath": "Equipe/flamengo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Equipe\\flamengo.png"
     },
     {
       "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\favicon.ico",

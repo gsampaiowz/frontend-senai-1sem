@@ -115,7 +115,7 @@ namespace projeto_gamer.Controllers
             {
                 var file = form.Files[0];
 
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Equipe");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
 
                 if (!Directory.Exists(folder))
                 {
@@ -129,12 +129,13 @@ namespace projeto_gamer.Controllers
 
                     novaEquipe.Imagem = file.FileName;
                 }
-                else
-                {
-                    novaEquipe.Imagem = "padrao.png";
-                }
 
             }
+            else
+            {
+                novaEquipe.Imagem = "padrao.png";
+            }
+
 
 
             Equipe equipe = c.Equipe.First(x => x.IdEquipe == e.IdEquipe);
