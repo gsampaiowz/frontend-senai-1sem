@@ -1,4 +1,4 @@
-@model Jogador
+@model Jogador 
 
 @{
     ViewData["Title"] = "Jogador";
@@ -15,16 +15,18 @@
   <input type="text" name="Nome" />
 
   <label for="Email">Email</label>
-  <input type="text" name="Email" />
+  <input type="email" name="Email" />
 
-  @* <select name="Equipe" id="">
-    <option value="IdEquipe">
-        @foreach (Equipe equipe in ViewBag.Equipe)
-        {
-            @equipe.Nome
-        }
-    </option>
-  </select> *@
+  <label for="Senha">Senha</label>
+  <input type="password" name="Senha" />
+
+  <select name="Equipe" id="">
+    <option value="0">Selecione uma equipe</option>
+            @foreach (Equipe equipe in ViewBag.Equipe)
+            {
+                    <option value="@equipe.IdEquipe">@equipe.Nome</option>
+            }
+  </select>
 
   <button type="submit">Cadastrar</button>
 </form>
@@ -39,14 +41,16 @@
     <tbody>
         @foreach (Jogador jogador in ViewBag.Jogador)
         {
-            <tr>
-                <td>@jogador.IdJogador</td>
-                <td>@jogador.Nome</td>
-                <td>@jogador.Email</td>
-                <td>
-                    <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
-                </td>
-            </tr>
+                    <tr>
+                        <td>@jogador.IdJogador</td>
+                        <td>@jogador.Nome</td>
+                        <td>@jogador.Email</td>
+                        <td>
+                            <img src="/img/Equipes/@jogador.Equipe!.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
+                        </td>
+                        <th><a asp-area="Link para excluir Jogador" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a></th>
+      <th><a asp-area="Link para editar Jogador" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a></th>
+                    </tr>
         }
     </tbody>
 </table>

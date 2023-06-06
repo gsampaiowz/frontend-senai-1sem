@@ -79,15 +79,15 @@ namespace projeto_gamer.Controllers
         {
             try
             {
-                Equipe e = c.Equipe.First(e => e.IdEquipe == id);
+                Equipe equipeExcluida = c.Equipe.First(equipeBuscada => equipeBuscada.IdEquipe == id);
 
-                c.Equipe.Remove(e);
+                c.Equipe.Remove(equipeExcluida);
 
                 c.SaveChanges();
 
                 return LocalRedirect("~/Equipe/Listar");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 // TODO
                 return LocalRedirect("~/Equipe/Erro");
@@ -96,7 +96,7 @@ namespace projeto_gamer.Controllers
 
         public IActionResult Editar(int id)
         {
-            Equipe e = c.Equipe.First(e => e.IdEquipe == id);
+            Equipe e = c.Equipe.First(equipeBuscada => equipeBuscada.IdEquipe == id);
 
             ViewBag.Equipe = e;
 
@@ -104,11 +104,11 @@ namespace projeto_gamer.Controllers
         }
 
         [Route("Atualizar")]
-        public IActionResult Atualizar(IFormCollection form, Equipe e)
+        public IActionResult Atualizar(IFormCollection form, Equipe equipeBuscada)
         {
             Equipe novaEquipe = new Equipe();
 
-            novaEquipe.Nome = e.Nome;
+            novaEquipe.Nome = equipeBuscada.Nome;
 
             //upload da imagem da equipe atualizada
             if (form.Files.Count > 0)
@@ -138,7 +138,7 @@ namespace projeto_gamer.Controllers
 
 
 
-            Equipe equipe = c.Equipe.First(x => x.IdEquipe == e.IdEquipe);
+            Equipe equipe = c.Equipe.First(x => x.IdEquipe == equipeBuscada.IdEquipe);
 
             equipe.Nome = novaEquipe.Nome;
             equipe.Imagem = novaEquipe.Imagem;

@@ -23,6 +23,7 @@ namespace projeto_gamer.Controllers
             //"mochila" que contém a lista dos Jogadores
             //Podemos usar essa mochila na View de Jogador
             ViewBag.Jogador = c.Jogador.ToList();
+            ViewBag.Equipe = c.Equipe.ToList();
             //Retorna a View da classe Jogador
             return View();
         }
@@ -34,38 +35,8 @@ namespace projeto_gamer.Controllers
 
             novoJogador.Nome = form["Nome"].ToString();
             novoJogador.Email = form["Email"].ToString();
-
-            //Vem como string
-            // novoJogador.Imagem = form["Imagem"].ToString();
-
-            // //Aqui começa a lógica do upload de imagem
-            // if (form.Files.Count > 0)
-            // {
-            //     //Armazena o arquivo da imagem
-            //     var file = form.Files[0];
-            //     //Encontra a pasta do projeto
-            //     var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Jogadors");
-            //     //Verifica se a pasta existe
-            //     if (!Directory.Exists(folder))
-            //     {
-            //         //Cria a pasta
-            //         Directory.CreateDirectory(folder);
-            //     }
-            //     //
-            //     var path = Path.Combine(folder, file.FileName);
-            //     //
-            //     using (var stream = new FileStream(path, FileMode.Create))
-            //     {
-            //         //Copia para o caminho
-            //         file.CopyTo(stream);
-            //     }
-
-            //     novoJogador.Imagem = file.FileName;
-            // }
-            // else
-            // {
-            //     novoJogador.Imagem = "padrao.png";
-            // }
+            novoJogador.Senha = form["Senha"].ToString();
+            novoJogador.IdEquipe = int.Parse(form["Equipe"].ToString());
 
             c.Jogador.Add(novoJogador);
             //c.Add(novoJogador);
@@ -80,7 +51,7 @@ namespace projeto_gamer.Controllers
         {
             try
             {
-                Jogador e = c.Jogador.First(e => e.IdJogador == id);
+                Jogador e = c.Jogador.First(j => j.IdJogador == id);
 
                 c.Jogador.Remove(e);
 
@@ -88,7 +59,7 @@ namespace projeto_gamer.Controllers
 
                 return LocalRedirect("~/Jogador/Listar");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 // TODO
                 return LocalRedirect("~/Jogador/Erro");
@@ -97,55 +68,34 @@ namespace projeto_gamer.Controllers
 
         public IActionResult Editar(int id)
         {
-            Jogador e = c.Jogador.First(e => e.IdJogador == id);
+            Jogador jogadorBuscado = c.Jogador.First(jogadorBuscado => jogadorBuscado.IdJogador == id);
 
-            ViewBag.Jogador = e;
+            ViewBag.Jogador = jogadorBuscado;
+            ViewBag.Equipe = c.Equipe.ToList();
 
             return View("Edit");
         }
 
         [Route("Atualizar")]
-        public IActionResult Atualizar(IFormCollection form, Jogador j)
+        public IActionResult Atualizar(IFormCollection form)
         {
             Jogador novoJogador = new Jogador();
 
-            novoJogador.Nome = j.Nome;
-            novoJogador.Email = j.Email;
+            novoJogador.IdJogador = int.Parse(form["IdJogador"].ToString());
 
-            // //upload da imagem da Jogador atualizada
-            // if (form.Files.Count > 0)
-            // {
-            //     var file = form.Files[0];
+            novoJogador.Nome = form["Nome"].ToString();
+            novoJogador.Email = form["Email"].ToString();
+            novoJogador.Senha = form["Senha"].ToString();
+            novoJogador.IdEquipe = int.Parse(form["IdEquipe"].ToString());
 
-            //     var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Jogador");
+            Jogador JogadorEditado = c.Jogador.First(x => x.IdJogador == novoJogador.IdJogador);
 
-            //     if (!Directory.Exists(folder))
-            //     {
-            //         Directory.CreateDirectory(folder);
-            //         var path = Path.Combine(folder, file.FileName);
+            JogadorEditado.Nome = novoJogador.Nome;
+            JogadorEditado.Email = novoJogador.Email;
+            JogadorEditado.Senha = novoJogador.Senha;
+            JogadorEditado.IdEquipe = novoJogador.IdEquipe;
 
-            //         using (var stream = new FileStream(path, FileMode.Create))
-            //         {
-            //             file.CopyTo(stream);
-            //         }
-
-            //         novoJogador.Imagem = file.FileName;
-            //     }
-
-
-            // }
-            // else
-            // {
-            //     novoJogador.Imagem = "padrao.png";
-            // }
-
-
-            Jogador Jogador = c.Jogador.First(x => x.IdJogador == j.IdJogador);
-
-            Jogador.Nome = novoJogador.Nome;
-            Jogador.Email = novoJogador.Email;
-
-            c.Jogador.Update(Jogador);
+            c.Jogador.Update(JogadorEditado);
 
             c.SaveChanges();
 
