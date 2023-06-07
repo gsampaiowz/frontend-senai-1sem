@@ -1,57 +1,147 @@
 @font-face {
-    font-family: Crossten-Extrabold;
-    src: url("../assets/fonts/Crossten-Extrabold.otf");
+  font-family: Crossten-Extrabold;
+  src: url("../assets/fonts/Crossten-Extrabold.otf");
 }
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 .margem-padrao {
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    height: 100px;
+  background: rgb(166, 92, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(166, 92, 205, 1) 0%,
+    rgba(51, 37, 174, 1) 100%
+  );
 }
 
 header h1 {
-    font-family: Crossten-Extrabold;
-    font-size: 50px;
+  font-family: Crossten-Extrabold;
+  font-size: 40px;
 }
 
 header .barra-pesquisa {
-    width: 460px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border: black 1px solid;
-    border-radius: 8px;
+  width: 460px;
+  height: 50px;
+}
+
+header ::placeholder {
+  padding-left: 15px;
+  color: rgb(173, 173, 173);
+  font-size: 14px;
 }
 
 header .links {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
 }
 
 header .icones-header {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .icone {
+  border: white 1px solid;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inicio {
-    height: 765px;
+  height: 650px;
+  background: rgb(166, 92, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(166, 92, 205, 1) 0%,
+    rgba(51, 37, 174, 1) 100%
+  );
 }
+
+.inicio-flex {
+  display: flex;
+  align-items: center;
+}
+
+.inicio .banner {
+  position: relative;
+  height: 640px;
+  z-index: 1;
+  top: 80px;
+}
+
+.inicio .conteudo {
+  color: white;
+  position: absolute;
+  right: 170px;
+}
+
+.inicio .conteudo h2,
+h1 {
+  font-family: Crossten-Extrabold;
+}
+
+.inicio .conteudo h1 {
+  font-size: 80px;
+  margin: 0;
+  width: ;
+}
+
+.inicio .setas {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.inicio .direita {
+  right: 20px;
+}
+.inicio .esquerda {
+  left: 20px;
+}
+
+.inicio .conteudo button {
+  background-color: #ffbf13;
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.beneficios;

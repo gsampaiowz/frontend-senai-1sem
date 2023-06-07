@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Desafio Front</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Desafio Front</title>
-</head>
-
-<body>
-  <header class="margem-padrao">
-    <h1>RELAP</h1>
-    <div class="barra-pesquisa">
-      <p>Search</p>
-    </div>
-    <div class="links">
-      <a href="store">Store</a><a href="features">Features</a><a href="about">About</a><a href="blog">Blog</a><a
-        href="news">News</a>
-    </div>
-    <div class="icones-header">
-      <div class="icone"><img width="26.5px" src="assets/icons/coracao.png" alt="Ícone de coração" /></div>
-      <div class="icone"><img src="assets/icons/bolsa-trolley.png" alt="Ícone de carrinho de compras" /></div>
-      <div class="icone"><img src="assets/icons/hamburger.png" alt="Ícone de menu de hamburger" /></div>
-    </div>
-  </header>
-  <main>
-    <section class="inicio">
-      <img src="" alt="Notebook" />
-      <h2>MINIM VENIAM</h2>
-      <h1>Ut labore et dolore</h1>
-      <div class="botao">
-        <p>Buy Now</p>
+  <body>
+    <header>
+      <div class="margem-padrao flex">
+        <h1>RELAP</h1>
+        <input class="barra-pesquisa" type="text" placeholder="Search" />
+        <div class="links">
+          <a href="store">Store</a><a href="features">Features</a
+          ><a href="about">About</a><a href="blog">Blog</a
+          ><a href="news">News</a>
+        </div>
+        <div class="icones-header">
+          <div class="icone">
+            <img
+              width="22px"
+              src="assets/icons/coracao.png"
+              alt="Ícone de coração"
+            />
+          </div>
+          <div class="icone">
+            <img
+              width="26px"
+              src="assets/icons/bolsa-trolley.png"
+              alt="Ícone de carrinho de compras"
+            />
+          </div>
+          <div class="icone">
+            <img
+              width="20px"
+              src="assets/icons/hamburger.png"
+              alt="Ícone de menu de hamburger"
+            />
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer></footer>
-</body>
+    </header>
 
+    <main>
+      <section class="inicio">
+        <div class="margem-padrao inicio-flex">
+          <img
+            class="setas esquerda"
+            src="assets/icons/seta-esquerda.png"
+            alt="Seta para
+        a esquerda"
+          />
+          <img
+            class="banner"
+            src="assets/img/notebook-banner.png"
+            alt="Notebook"
+          />
+          <div class="conteudo">
+            <h2>MINIM VENIAM</h2>
+            <h1>
+              Ut labore et<br />
+              dolore
+            </h1>
+            <button type="submit">Buy Now</button>
+          </div>
+          <img
+            class="setas direita"
+            src="assets/icons/seta-direita.png"
+            alt="Seta para a seta-direita"
+          />
+        </div>
+      </section>
+
+      <section class="beneficios">
+        <div class="margem-padrao">
+          <div class="box">
+            <img
+              src="assets/icons/caminhao-de-entrega.png"
+              alt="Ícone de caminhão"
+            />
+            <h2>Quis nostrud</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="box">
+            <img
+              src="assets/icons/simbolo-de-recarga.png"
+              alt="Ícone de recarga"
+            />
+            <h2>Exercitation</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="box">
+            <img
+              src="assets/icons/telemarketing.png"
+              alt="Ícone de atendente de telemarketing"
+            />
+            <h2>Ullamco laboris</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="box">
+            <img
+              src="assets/icons/sacola.png"
+              alt="Ícone de sacola de compras"
+            />
+            <h2>Nisi ut aliquip</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
 </html>
