@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sd1V1eYwIWo+Fp2IvTp7ufMU/Ullb1TAaMTH+8IDamc=",
+  "Hash": "OS3lvfvjfro+SvOc9TYnUdyhv0GlgwWqfmMkvi9+7rs=",
   "Source": "projeto-gamer",
   "BasePath": "_content/projeto-gamer",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\flamengo.png",
+      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\cortinas.png",
       "SourceId": "projeto-gamer",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
       "BasePath": "_content/projeto-gamer",
-      "RelativePath": "img/Equipes/flamengo.png",
+      "RelativePath": "img/Equipes/cortinas.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Equipes\\flamengo.png"
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\cortinas.png"
+    },
+    {
+      "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\mingau.png",
+      "SourceId": "projeto-gamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\",
+      "BasePath": "_content/projeto-gamer",
+      "RelativePath": "img/Equipes/mingau.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\mingau.png"
     },
     {
       "Identity": "C:\\Users\\42591939888\\Desktop\\Senai\\BackEnd\\MVC\\projeto-gamer\\wwwroot\\img\\Equipes\\padrao.png",

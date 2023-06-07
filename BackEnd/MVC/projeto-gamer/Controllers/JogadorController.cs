@@ -20,6 +20,8 @@ namespace projeto_gamer.Controllers
         [Route("Listar")]//http://localhost/Jogador/Listar
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+
             //"mochila" que contém a lista dos Jogadores
             //Podemos usar essa mochila na View de Jogador
             ViewBag.Jogador = c.Jogador.ToList();
@@ -65,9 +67,10 @@ namespace projeto_gamer.Controllers
                 return LocalRedirect("~/Jogador/Erro");
             }
         }
-
         public IActionResult Editar(int id)
         {
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+
             Jogador jogadorBuscado = c.Jogador.First(jogadorBuscado => jogadorBuscado.IdJogador == id);
 
             ViewBag.Jogador = jogadorBuscado;

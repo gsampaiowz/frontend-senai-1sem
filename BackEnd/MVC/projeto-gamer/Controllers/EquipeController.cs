@@ -20,6 +20,8 @@ namespace projeto_gamer.Controllers
         [Route("Listar")]//http://localhost/Equipe/Listar
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+
             //"mochila" que contém a lista das equipes
             //Podemos usar essa mochila na View de equipe
             ViewBag.Equipe = c.Equipe.ToList();
@@ -49,6 +51,7 @@ namespace projeto_gamer.Controllers
                 {
                     //Cria a pasta
                     Directory.CreateDirectory(folder);
+
                 }
                 //
                 var path = Path.Combine(folder, file.FileName);
@@ -58,7 +61,7 @@ namespace projeto_gamer.Controllers
                     //Copia para o caminho
                     file.CopyTo(stream);
                 }
-
+                //Atribui nome do arquivo da imagem
                 novaEquipe.Imagem = file.FileName;
             }
             else
@@ -96,9 +99,11 @@ namespace projeto_gamer.Controllers
 
         public IActionResult Editar(int id)
         {
-            Equipe e = c.Equipe.First(equipeBuscada => equipeBuscada.IdEquipe == id);
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
 
-            ViewBag.Equipe = e;
+            Equipe equipeBuscada = c.Equipe.First(equipeBuscada => equipeBuscada.IdEquipe == id);
+
+            ViewBag.Equipe = equipeBuscada;
 
             return View("Edit");
         }
@@ -120,16 +125,16 @@ namespace projeto_gamer.Controllers
                 if (!Directory.Exists(folder))
                 {
                     Directory.CreateDirectory(folder);
-                    var path = Path.Combine(folder, file.FileName);
 
-                    using (var stream = new FileStream(path, FileMode.Create))
-                    {
-                        file.CopyTo(stream);
-                    }
+                }
+                var path = Path.Combine(folder, file.FileName);
 
-                    novaEquipe.Imagem = file.FileName;
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
                 }
 
+                novaEquipe.Imagem = file.FileName;
             }
             else
             {
