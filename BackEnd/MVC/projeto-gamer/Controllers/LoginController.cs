@@ -38,7 +38,7 @@ namespace projeto_gamer.Controllers
             //lógica da sessão
             if (jogadorBuscado != null)
             {
-                HttpContext.Session.SetString("Username", jogadorBuscado.Nome!);
+                HttpContext.Session.SetString("UserName", jogadorBuscado.Nome!);
                 return LocalRedirect("~/");
             }
 

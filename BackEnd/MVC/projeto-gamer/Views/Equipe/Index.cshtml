@@ -3,7 +3,13 @@
 
 <h1>Tela de Equipes</h1>
 
-<form
+@if (ViewBag.UserName == null)
+{
+  <a class="nav-item nav-link text-dark" class="navbar-brand" asp-area="Botão para fazer login" asp-controller="Login" asp-action="Index">Faça Login para ter acesso ao cadastro</a>
+}
+else
+{
+  <form
   method="post"
   action='@Url.Action("Cadastrar")'
   enctype="multipart/form-data"
@@ -16,6 +22,7 @@
 
   <button type="submit">Cadastrar</button>
 </form>
+}
 
 <table class="table table-striped table-responsive">
   <thead>

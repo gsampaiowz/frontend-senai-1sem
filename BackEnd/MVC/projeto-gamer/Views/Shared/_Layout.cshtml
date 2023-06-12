@@ -25,6 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Link para a página Privacy" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li> *@
+
+                        @if (ViewBag.UserName != null)
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Link para a página Index" asp-controller="Equipe" asp-action="Index">Equipes</a>
                         </li>
@@ -32,8 +35,14 @@
                             <a class="nav-link text-dark" asp-area="Link para a página Index" asp-controller="Jogador" asp-action="Index">Jogadores</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Link para a página Index" asp-controller="Login" asp-action="Logout">Logout</a>
+                        </li> 
+                        <li class="nav-item nav-link text-dark">Olá @ViewBag.UserName, seja bem vindo!</li> 
+                        }else{
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Link para a página Index" asp-controller="Login" asp-action="Index">Login</a>
                         </li>
+                        }          
                     </ul>
                 </div>
             </div>
