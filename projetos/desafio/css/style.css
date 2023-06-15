@@ -75,27 +75,27 @@ img {
 	border-bottom: 8px solid #c873d4;
 }
 
-h1 {
+body h1 {
 	font-family: Crossten-Extrabold;
 	font-size: 60px;
 	color: #353535;
 	margin: 0;
 }
 
-h2 {
+body h2 {
 	text-transform: uppercase;
 	color: #353535;
 	font-family: Crossten-Extrabold;
 	font-size: 20px;
 }
 
-h3 {
+body h3 {
 	color: #353535;
 	font-family: Crossten-Extrabold;
 	font-size: 26px;
 }
 
-input {
+body input {
 	width: 460px;
 	padding-left: 20px;
 	height: 50px;
@@ -204,7 +204,7 @@ header {
 .inicio-flex .conteudo {
 	color: white;
 	position: absolute;
-	right: 150px;
+	right: 130px;
 }
 
 .inicio-flex .conteudo h2 {
@@ -340,7 +340,7 @@ header {
 
 .produtos-flex .lista {
 	display: flex;
-	gap: 50px;
+	gap: 30px;
 }
 
 .produtos-flex .lista .box {
@@ -861,6 +861,13 @@ footer {
 }
 
 @media (max-width: 1250px) {
+	/* Pré-definidos */
+	body h1 {
+		font-size: 45px;
+	}
+	body h3 {
+		font-size: 22px;
+	}
 	/* Adapatando cabeçalho */
 	.header-flex .links {
 		display: none;
@@ -892,7 +899,6 @@ footer {
 	}
 	.beneficios-flex .card {
 		flex-direction: column;
-		align-items: center;
 	}
 	.beneficios-flex .card .textos h2 {
 		font-size: 20px;
@@ -905,8 +911,13 @@ footer {
 		justify-content: space-evenly;
 		gap: 0;
 	}
+	.produtos-flex .lista .box {
+		width: 200px;
+	}
 	.produtos-flex .lista .box img {
 		height: 100px;
+		width: max-content;
+		align-self: center;
 	}
 	/* !PROMOCOES */
 	.promocoes {
@@ -933,20 +944,203 @@ footer {
 	}
 	/* !MAIS PRODUTOS */
 	.mais-produtos {
+		height: 590px;
 	}
+	.mais-produtos-flex .linha-produtos .box {
+		width: 200px;
+		position: relative;
+		height: 300px;
+	}
+	.mais-produtos-flex .linha-produtos .box > img {
+		width: max-content;
+		height: 100px;
+		align-self: center;
+	}
+	.mais-produtos-flex .linha-produtos .box .icone {
+		position: absolute;
+		bottom: 25px;
+		right: 25px;
+	}
+	/* !OFERTA */
 	.oferta {
-		display: none;
+		height: 575px;
 	}
+	.oferta-flex .linha h2 {
+		font-size: 35px;
+	}
+	.oferta-flex .conteudo .box {
+		width: 200px;
+	}
+	.oferta-flex .conteudo .fone {
+		display: flex;
+		align-items: center;
+	}
+	.oferta-flex .conteudo .fone img {
+		width: 280px;
+	}
+	.oferta-flex .conteudo .fone .desconto {
+		width: 80px;
+		height: 80px;
+		right: 0;
+		top: 35px;
+	}
+	.oferta-flex .conteudo .fone .desconto h3 {
+		font-size: 26px;
+	}
+	/* !NOTICIAS */
 	.noticias {
-		display: none;
 	}
+	.noticias-flex .cards .box {
+		width: 270px;
+	}
+	/* !INSCREVER */
 	.inscrever {
-		display: none;
+		height: 300px;
 	}
 	footer {
-		display: none;
+		height: 300px;
 	}
 }
 
 @media (max-width: 1025px) {
+	/* Pré-definidos */
+	body h1 {
+		font-size: 35px;
+	}
+
+	/* Ocultando barra de pesquisa */
+	.header-flex input {
+		display: none;
+	}
+	/* !INICIO */
+	.inicio {
+		height: 380px;
+	}
+	.inicio-flex .banner {
+		height: 350px;
+		top: 50px;
+	}
+	.inicio-flex .conteudo {
+		right: 130px;
+		top: 190px;
+	}
+	.inicio-flex .conteudo h1 {
+		font-size: 45px;
+	}
+	/* !BENEFICIOS */
+	.beneficios {
+		height: 420px;
+	}
+	.beneficios-flex {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.beneficios-flex .card {
+		width: 50%;
+	}
+	/* !PRODUTOS */
+	.produtos {
+		height: 1000px;
+	}
+	.produtos-flex p {
+		font-size: 12px;
+	}
+	.produtos-flex .lista {
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.produtos-flex .lista .box {
+		width: 40%;
+	}
+	/* !PROMOCOES */
+	.promocoes {
+		
+	}
+
+	/* !MAIS PRODUTOS */
+	.mais-produtos {
+		display: none;
+	}
+	/* !OFERTA */
+	.oferta {
+		display: none;
+	}
+	/* !NOTICIAS */
+	.noticias {
+		display: none;
+	}
+	/* !INSCREVER */
+	.inscrever {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	/* !INICIO */
+	.inicio {
+		display: none;
+	}
+	/* !BENEFICIOS */
+	.beneficios {
+		display: none;
+	}
+	/* !PRODUTOS */
+	.produtos {
+		display: none;
+	}
+	/* !PROMOCOES */
+	.promocoes {
+		display: none;
+	}
+	/* !MAIS PRODUTOS */
+	.mais-produtos {
+		display: none;
+	}
+	/* !OFERTA */
+	.oferta {
+		display: none;
+	}
+	/* !NOTICIAS */
+	.noticias {
+		display: none;
+	}
+	/* !INSCREVER */
+	.inscrever {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	/* !INICIO */
+	.inicio {
+		display: none;
+	}
+	/* !BENEFICIOS */
+	.beneficios {
+		display: none;
+	}
+	/* !PRODUTOS */
+	.produtos {
+		display: none;
+	}
+	/* !PROMOCOES */
+	.promocoes {
+		display: none;
+	}
+	/* !MAIS PRODUTOS */
+	.mais-produtos {
+		display: none;
+	}
+	/* !OFERTA */
+	.oferta {
+		display: none;
+	}
+	/* !NOTICIAS */
+	.noticias {
+		display: none;
+	}
+	/* !INSCREVER */
+	.inscrever {
+		display: none;
+	}
 }
