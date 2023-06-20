@@ -30,10 +30,10 @@ img {
 }
 
 .box {
+	gap: 15px;
 	display: flex;
 	overflow: hidden;
 	flex-direction: column;
-	gap: 15px;
 	padding: 35px;
 	box-shadow: rgba(0, 0, 0, 0.1) 20px 20px 30px,
 		rgba(0, 0, 0, 0.05) -5px -5px 30px;
@@ -253,7 +253,7 @@ header {
 .beneficios-flex {
 	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -477,6 +477,7 @@ header {
 
 .mais-produtos-flex .linha-produtos .box {
 	overflow: visible;
+	width: 270px;
 }
 
 .mais-produtos-flex .linha-produtos .box h4 {
@@ -656,6 +657,7 @@ header {
 	width: 370px;
 	height: 420px;
 	padding: 0;
+	gap: 0;
 }
 
 .noticias-flex .cards .box img {
@@ -899,6 +901,7 @@ footer {
 	}
 	.beneficios-flex .card {
 		flex-direction: column;
+		width: 230px;
 	}
 	.beneficios-flex .card .textos h2 {
 		font-size: 20px;
@@ -966,7 +969,7 @@ footer {
 		height: 575px;
 	}
 	.oferta-flex .linha h2 {
-		font-size: 35px;
+		font-size: 25px;
 	}
 	.oferta-flex .conteudo .box {
 		width: 200px;
@@ -988,10 +991,13 @@ footer {
 		font-size: 26px;
 	}
 	/* !NOTICIAS */
-	.noticias {
+	.noticias-flex .cards {
+		justify-content: center;
+		gap: 25px;
 	}
 	.noticias-flex .cards .box {
 		width: 270px;
+		height: 360px;
 	}
 	/* !INSCREVER */
 	.inscrever {
@@ -1029,14 +1035,15 @@ footer {
 	}
 	/* !BENEFICIOS */
 	.beneficios {
-		height: 420px;
+		height: 480px;
 	}
 	.beneficios-flex {
 		flex-wrap: wrap;
-		justify-content: space-between;
+		gap: 0 15%;
+		justify-content: center;
 	}
 	.beneficios-flex .card {
-		width: 50%;
+		flex-direction: row;
 	}
 	/* !PRODUTOS */
 	.produtos {
@@ -1047,100 +1054,307 @@ footer {
 	}
 	.produtos-flex .lista {
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: center;
+		gap: 25px;
 	}
 	.produtos-flex .lista .box {
 		width: 40%;
 	}
 	/* !PROMOCOES */
 	.promocoes {
-		
+		height: 975px;
+	}
+	.promocoes-flex .grid {
+		gap: 20px;
+	}
+	.promocoes-flex .grid .box4 {
+		grid-column-start: 1;
+		grid-column-end: 3;
 	}
 
 	/* !MAIS PRODUTOS */
 	.mais-produtos {
-		display: none;
+		height: 900px;
+	}
+	.mais-produtos-flex .linha-produtos {
+		flex-wrap: wrap;
+		gap: 25px;
+		justify-content: center;
+	}
+	.mais-produtos-flex .linha-produtos .box {
+		width: 300px;
 	}
 	/* !OFERTA */
 	.oferta {
-		display: none;
+		height: 890px;
+	}
+	.oferta-flex .conteudo {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 50px;
+	}
+	.oferta-flex .conteudo .box {
+		height: 300px;
+	}
+	.oferta-flex .conteudo .box .filtros {
+		gap: 30px;
+	}
+	.oferta-flex .conteudo .detalhes {
+		gap: 30px;
 	}
 	/* !NOTICIAS */
 	.noticias {
-		display: none;
+		height: 600px;
+	}
+	.noticias-flex .cards .box {
+		width: 215px;
+		height: 300px;
+	}
+	.noticias-flex .cards .box .textos {
+		padding: 20px;
 	}
 	/* !INSCREVER */
-	.inscrever {
-		display: none;
+	.inscrever-flex .entrada {
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
 @media (max-width: 768px) {
 	/* !INICIO */
 	.inicio {
-		display: none;
+		height: 460px;
+	}
+	.inicio-flex {
+		flex-direction: column-reverse;
+		justify-content: center;
+		position: relative;
+	}
+	.inicio-flex .esquerda {
+		top: 45%;
+	}
+	.inicio-flex .direita {
+		top: 45%;
+	}
+	.inicio-flex .conteudo {
+		position: static;
+	}
+	.inicio-flex .banner {
+		height: 250px;
 	}
 	/* !BENEFICIOS */
 	.beneficios {
-		display: none;
+		height: 380px;
 	}
-	/* !PRODUTOS */
-	.produtos {
-		display: none;
+	.beneficios-flex {
+		gap: 0;
+	}
+	.beneficios-flex .card {
+		width: 50%;
+	}
+	.beneficios-flex .card img {
+		width: 40px;
+		height: 40px;
 	}
 	/* !PROMOCOES */
 	.promocoes {
-		display: none;
+		height: 1080px;
+	}
+	.promocoes-flex .grid .box1,
+	.promocoes-flex .grid .box2,
+	.promocoes-flex .grid .box3 {
+		width: 150px;
+	}
+	.promocoes-flex .grid .box4 {
+		width: 320px;
+		height: 300px;
+	}
+	.promocoes-flex .grid .box4 img {
+		width: 440px;
+		left: -90px;
+		bottom: 30px;
+	}
+	.promocoes-flex .grid .box2 img {
+		left: -50px;
+		bottom: 50px;
+		width: 200px;
+	}
+	.promocoes-flex .grid .box3 img {
+		width: 120px;
+		left: -20px;
+		bottom: -10px;
+	}
+	.promocoes-flex .grid .box1 {
+		width: 320px;
+		height: 300px;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.promocoes-flex .grid .box1 img {
+		width: 325px;
+		right: 40px;
+		top: 0;
 	}
 	/* !MAIS PRODUTOS */
-	.mais-produtos {
-		display: none;
+	.mais-produtos-flex .linha .filtros {
+		flex-wrap: wrap;
+	}
+	.mais-produtos-flex .linha-produtos .box {
+		width: 200px;
 	}
 	/* !OFERTA */
 	.oferta {
-		display: none;
+		height: 800px;
+	}
+	.oferta-flex .conteudo {
+		gap: 25px;
+	}
+	.oferta-flex .conteudo .fone .desconto {
+		height: 70px;
+		width: 70px;
+	}
+	.oferta-flex .conteudo .fone .desconto h3 {
+		font-size: 20px;
+	}
+	.oferta-flex .conteudo .detalhes {
+		gap: 15px;
+	}
+	.oferta-flex .conteudo .fone img {
+		width: 200px;
+	}
+	.oferta-flex .conteudo .box {
+		width: 160px;
 	}
 	/* !NOTICIAS */
 	.noticias {
-		display: none;
+		height: 800px;
+	}
+	.noticias-flex .cards {
+		flex-wrap: wrap;
+	}
+	.noticias-flex .cards .box {
+		width: 180px;
+		height: 270px;
 	}
 	/* !INSCREVER */
 	.inscrever {
-		display: none;
+		height: 400px;
+	}
+	.inscrever-flex {
+		flex-direction: column;
+		gap: 0;
+		justify-content: space-evenly;
+	}
+	.inscrever-flex .textos p {
+		z-index: 1;
+	}
+	/* !RODAPE */
+	footer {
+		height: 440px;
+	}
+	.footer-flex .info {
+		height: 300px;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0 25%;
+	}
+	.footer-flex .rodape {
+		height: 140px;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0 50px;
 	}
 }
 
 @media (max-width: 480px) {
 	/* !INICIO */
-	.inicio {
-		display: none;
+	.inicio-flex .banner {
+		height: 220px;
+	}
+	.inicio-flex .esquerda {
+		left: -10px;
+	}
+	.inicio-flex .direita {
+		right: -10px;
 	}
 	/* !BENEFICIOS */
 	.beneficios {
-		display: none;
+		height: 480px;
+	}
+	.beneficios-flex {
+		flex-direction: column;
+	}
+	.beneficios-flex .card {
+		width: auto;
 	}
 	/* !PRODUTOS */
 	.produtos {
-		display: none;
+		height: 1200px;
+	}
+	.produtos-flex .lista .box {
+		flex-direction: row;
+		width: 260px;
+		height: 200px;
+		padding: 25px;
+	}
+	.produtos-flex .lista .box img {
+		width: 100px;
+		height: max-content;
 	}
 	/* !PROMOCOES */
 	.promocoes {
-		display: none;
+	}
+	.promocoes-flex .grid .box {
+		padding: 25px;
+	}
+	.promocoes-flex .grid .box3,
+	.promocoes-flex .grid .box2 {
+		width: 130px;
+	}
+	.promocoes-flex .grid .box1,
+	.promocoes-flex .grid .box4 {
+		width: 280px;
 	}
 	/* !MAIS PRODUTOS */
 	.mais-produtos {
-		display: none;
+		height: 1400px;
+	}
+	.mais-produtos-flex .linha-produtos .box {
+		height: 260px;
+		width: 250px;
+		padding: 25px;
 	}
 	/* !OFERTA */
 	.oferta {
-		display: none;
+		height: 1080px;
+	}
+	.oferta-flex .linha {
+		flex-wrap: wrap;
+	}
+	.oferta-flex .conteudo .fone .desconto {
+		top: 0;
 	}
 	/* !NOTICIAS */
 	.noticias {
-		display: none;
+		height: 1080px;
+	}
+	.noticias-flex .circulo {
+		width: 70px;
+		height: 70px;
+		bottom: -30px;
+		left: 70%;
 	}
 	/* !INSCREVER */
-	.inscrever {
-		display: none;
+	.inscrever-flex .entrada .circulo {
+		bottom: -150px;
+		width: 250px;
+		height: 250px;
+	}
+	.inscrever-flex .entrada input {
+		width: 280px;
+	}
+	/* !RODAPE */
+	.footer-flex .info {
+		gap: 0 10%;
 	}
 }
