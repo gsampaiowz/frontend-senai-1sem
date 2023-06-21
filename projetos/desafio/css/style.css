@@ -53,7 +53,9 @@ img {
 	justify-content: center;
 	align-items: center;
 }
-
+.icone:hover {
+	cursor: pointer;
+}
 .linha {
 	display: flex;
 	width: 100%;
@@ -68,7 +70,11 @@ img {
 	font-weight: bold;
 	color: darkgray;
 }
-
+.filtros a:hover {
+	color: #c873d4;
+	transition: 0.5s;
+	cursor: pointer;
+}
 .filtros a:first-of-type {
 	color: black;
 	height: 18px;
@@ -145,13 +151,24 @@ header {
 	font-size: 40px;
 	color: white;
 }
-
+.header-flex h1:hover {
+	transition: 0.5s;
+	cursor: pointer;
+	text-shadow: #353535 5px 5px 5px;
+}
+.header-flex input {
+	border-radius: 5px;
+}
 .header-flex .links {
 	display: flex;
 	gap: 25px;
+	align-items: center;
 }
-
-.header-flex a {
+.header-flex .links a:hover {
+	color: #c873d4;
+	transition: 0.5s;
+}
+.header-flex .links a {
 	text-decoration: none;
 	color: white;
 	font-size: 14px;
@@ -205,6 +222,7 @@ header {
 	color: white;
 	position: absolute;
 	right: 130px;
+	z-index: 10;
 }
 
 .inicio-flex .conteudo h2 {
@@ -239,6 +257,11 @@ header {
 	border-radius: 30px;
 	color: white;
 	font-weight: bold;
+}
+.inicio-flex .conteudo button:hover {
+	cursor: pointer;
+	box-shadow: #353535 5px 5px 5px;
+	transition: 0.5s;
 }
 
 /* !BENEFICIOS */
@@ -337,7 +360,9 @@ header {
 	text-align: center;
 	color: #353535;
 }
-
+.produtos-flex .box .opcoes a:hover {
+	cursor: pointer;
+}
 .produtos-flex .lista {
 	display: flex;
 	gap: 30px;
@@ -450,7 +475,9 @@ header {
 	color: #c873d4;
 	position: relative;
 }
-
+.promocoes-flex .grid button:hover {
+	cursor: pointer;
+}
 .promocoes-flex .grid img {
 	width: 300px;
 }
@@ -494,7 +521,9 @@ header {
 	background-color: #c873d4;
 	align-self: flex-end;
 }
-
+.mais-produtos-flex .linha-produtos .box .icone:hover {
+	cursor: pointer;
+}
 .mais-produtos-flex .linha-produtos .box .icone img {
 	width: 25px;
 }
@@ -509,11 +538,13 @@ header {
 	border-radius: 40px;
 	width: 40px;
 }
-
+.mais-produtos-flex .setas img:hover {
+	cursor: pointer;
+}
 /* !OFERTA */
 
 .oferta {
-	height: 765px;
+	height: 600px;
 	background-color: #fdf2ff;
 }
 
@@ -635,7 +666,11 @@ header {
 	color: #fff;
 	font-weight: bold;
 }
-
+.oferta-flex .conteudo .detalhes button:hover {
+	cursor: pointer;
+	transition: 0.5s;
+	box-shadow: #353535 5px 5px 5px;
+}
 .noticias {
 	height: 765px;
 }
@@ -689,7 +724,9 @@ header {
 	border-radius: 40px;
 	width: 40px;
 }
-
+.noticias-flex .setas img:hover {
+	cursor: pointer;
+}
 .noticias-flex .circulo {
 	left: 60%;
 	z-index: 1;
@@ -772,7 +809,11 @@ header {
 	font-weight: bold;
 	z-index: 1;
 }
-
+.inscrever-flex .entrada button:hover {
+	box-shadow: #353535 5px 5px 5px;
+	transition: 0.5s;
+	cursor: pointer;
+}
 /* !RODAPÉ */
 
 footer {
@@ -828,7 +869,6 @@ footer {
 
 .footer-flex .rodape small {
 	color: darkgray;
-	font-weight: bold;
 }
 
 .footer-flex .rodape img {
@@ -870,9 +910,23 @@ footer {
 	body h3 {
 		font-size: 22px;
 	}
-	/* Adapatando cabeçalho */
-	.header-flex .links {
-		display: none;
+	/* Menu Mobile */
+	.header-flex .links{
+		position: fixed;
+		top: 0;
+		left: -50vw;
+		width: 50vw;
+		flex-direction: column;
+		height: 100vh;
+		background-color: #3023ae;
+		justify-content: space-evenly;
+		transition: 0.5s;
+		z-index: 99;
+		align-items: center;
+	}
+	.mostrarMenu {
+		left: 0 !important;
+		border-radius: 0 8px 0 8px;
 	}
 
 	.header-flex .icones-header .icone:last-of-type {
@@ -969,7 +1023,7 @@ footer {
 		height: 575px;
 	}
 	.oferta-flex .linha h2 {
-		font-size: 25px;
+		font-size: 35px;
 	}
 	.oferta-flex .conteudo .box {
 		width: 200px;
@@ -1013,10 +1067,8 @@ footer {
 	body h1 {
 		font-size: 35px;
 	}
-
-	/* Ocultando barra de pesquisa */
-	.header-flex input {
-		display: none;
+	.header-flex input{
+		width: 280px;
 	}
 	/* !INICIO */
 	.inicio {
@@ -1060,6 +1112,7 @@ footer {
 	.produtos-flex .lista .box {
 		width: 40%;
 	}
+
 	/* !PROMOCOES */
 	.promocoes {
 		height: 975px;
@@ -1101,6 +1154,9 @@ footer {
 	}
 	.oferta-flex .conteudo .detalhes {
 		gap: 30px;
+	}
+	.oferta-flex .linha h2 {
+		font-size: 25px;
 	}
 	/* !NOTICIAS */
 	.noticias {

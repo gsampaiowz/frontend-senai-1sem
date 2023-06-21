@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/script.js"></script>
 		<title>Desafio Front</title>
 	</head>
 
@@ -12,11 +13,11 @@
 		<header>
 			<div class="margem-padrao header-flex">
 				<h1>relap</h1>
-				<input type="text" placeholder="Search" />
-				<nav class="links">
-					<a href="#store">Store</a><a href="#features">Features</a
-					><a href="#about">About</a><a href="#blog">Blog</a
-					><a href="#news">News</a>
+
+				<nav id="menuMobile" class="links">
+					<input type="text" placeholder="Search" /> <a href="#store">Store</a
+					><a href="#features">Features</a><a href="#about">About</a
+					><a href="#blog">Blog</a><a href="#news">News</a>
 				</nav>
 				<div class="icones-header">
 					<div class="icone">
@@ -28,7 +29,7 @@
 							alt="Ícone de carrinho de compras"
 						/>
 					</div>
-					<div class="icone">
+					<div onclick="Hamburger()" class="icone">
 						<img
 							class="menu"
 							src="assets/icons/hamburger.png"
@@ -40,7 +41,7 @@
 		</header>
 
 		<main>
-			<section class="inicio">
+			<section id="store" class="inicio">
 				<div class="margem-padrao inicio-flex">
 					<img
 						class="setas esquerda"
@@ -68,7 +69,7 @@
 				</div>
 			</section>
 
-			<section class="beneficios">
+			<section id="features" class="beneficios">
 				<div class="margem-padrao beneficios-flex">
 					<div class="card">
 						<img
@@ -113,7 +114,7 @@
 				</div>
 			</section>
 
-			<section class="produtos">
+			<section id="about" class="produtos">
 				<div class="produtos-flex margem-padrao">
 					<h2>natus error</h2>
 					<h1>Unde omnis iste</h1>
@@ -167,7 +168,7 @@
 				</div>
 			</section>
 
-			<section class="promocoes">
+			<section id="blog" class="promocoes">
 				<div class="promocoes-flex margem-padrao">
 					<h2>deserunt</h2>
 					<h1>Mollit anim</h1>
@@ -325,7 +326,7 @@
 				</div>
 			</section>
 
-			<section class="noticias">
+			<section id="news" class="noticias">
 				<div class="noticias-flex margem-padrao">
 					<h2>velit esse</h2>
 					<h1>Quam nihil</h1>
@@ -425,7 +426,7 @@
 				</div>
 				<hr />
 				<div class="rodape">
-					<small>&copy; Copyright 2019. All Rights Reserved.</small>
+					<small>&copy; Copyright 2023 Gabriel Oliveira Sampaio</small>
 					<div class="redes">
 						<div class="icone">
 							<img
