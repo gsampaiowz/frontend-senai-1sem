@@ -477,6 +477,7 @@ header {
 }
 .promocoes-flex .grid button:hover {
 	cursor: pointer;
+	border-width: 2px;
 }
 .promocoes-flex .grid img {
 	width: 300px;
@@ -911,7 +912,7 @@ footer {
 		font-size: 22px;
 	}
 	/* Menu Mobile */
-	.header-flex .links{
+	.header-flex .links {
 		position: fixed;
 		top: 0;
 		left: -50vw;
@@ -1067,7 +1068,7 @@ footer {
 	body h1 {
 		font-size: 35px;
 	}
-	.header-flex input{
+	.header-flex input {
 		width: 280px;
 	}
 	/* !INICIO */
