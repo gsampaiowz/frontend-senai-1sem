@@ -10,14 +10,22 @@
 	</head>
 
 	<body>
-		<header>
+		<header id="topo">
 			<div class="margem-padrao header-flex">
 				<h1>relap</h1>
-
-				<nav id="menuMobile" class="links">
-					<input type="text" placeholder="Search" /> <a href="#store">Store</a
-					><a href="#features">Features</a><a href="#about">About</a
-					><a href="#blog">Blog</a><a href="#news">News</a>
+				<input type="text" placeholder="Search" />
+				<nav class="links-header">
+					<a href="#store">Store</a><a href="#features">Features</a
+					><a href="#about">About</a><a href="#blog">Blog</a
+					><a href="#news">News</a>
+				</nav>
+				<nav id="menuMobile" class="links-mobile">
+					<input type="text" placeholder="Search" />
+					<a onclick="Hamburger()" href="#store">Store</a
+					><a onclick="Hamburger()" href="#features">Features</a>
+					<a onclick="Hamburger()" href="#about">About</a
+					><a onclick="Hamburger()" href="#blog">Blog</a>
+					<a onclick="Hamburger()" href="#news">News</a>
 				</nav>
 				<div class="icones-header">
 					<div class="icone">
@@ -463,5 +471,17 @@
 				</div>
 			</div>
 		</footer>
+
+		<a href="#topo"
+			><img
+				src="assets/icons/seta-direita.png"
+				class="voltar-topo"
+				alt="Botão para voltar ao topo da página"
+		/></a>
+
+		<section class="sem-suporte">
+			<h1>Esse site ainda não possui suporte para esse tamanho de tela.</h1>
+			<img src="assets/icons/triste.png" alt="Emoji triste" />
+		</section>
 	</body>
 </html>
